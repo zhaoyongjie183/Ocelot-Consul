@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "order-api", "order-api\orde
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "product-api", "product-api\product-api.csproj", "{69B2EF2E-C246-46C3-9855-4C161BDDF980}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsulApi", "ConsulApi\ConsulApi.csproj", "{80652E04-358B-43CF-8685-A6F341690E0B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{69B2EF2E-C246-46C3-9855-4C161BDDF980}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69B2EF2E-C246-46C3-9855-4C161BDDF980}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69B2EF2E-C246-46C3-9855-4C161BDDF980}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80652E04-358B-43CF-8685-A6F341690E0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80652E04-358B-43CF-8685-A6F341690E0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80652E04-358B-43CF-8685-A6F341690E0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80652E04-358B-43CF-8685-A6F341690E0B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

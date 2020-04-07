@@ -1,0 +1,3 @@
+需要配置环境变量，最好配置在系统变量里面
+consul agent -dev //进入开发模式
+consul members //查看列表
