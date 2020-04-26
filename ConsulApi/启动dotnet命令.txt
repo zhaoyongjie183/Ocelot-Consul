@@ -1,0 +1,1 @@
+﻿dotnet run --urls="http://*:5726" --ServiceIP="localhost" --ServicePort=5726 --ServiceHealthCheck="http://localhost:5726/api/healthCheck" --ConsulAddress="http://localhost:8500" --ServiceName="ServiceA"
