@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "c8TH9OBwMPW1OtBd+zo7Cs27edIoMj82jCcEkUASHAQt5hHZB+0//tPkaAuOuRSFSAuSokQX3dRz0UVuvfvWFQ==",
+  "dgSpecHash": "FFuCceaaZ2yr8xtQcyPZXX8BSNmyBuKFIvSeWoRx+Om7C0aRoubiFntEY81D2HeQ3/ukvy9sfc5hC1gMQYUlOQ==",
   "success": true,
-  "projectFilePath": "E:\\Test\\CoreOcelot\\ConsulApi\\ConsulApi.csproj",
+  "projectFilePath": "E:\\Test\\Ocelot-Consul\\ConsulApi\\ConsulApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\89372\\.nuget\\packages\\consul\\0.7.2.6\\consul.0.7.2.6.nupkg.sha512",
     "C:\\Users\\89372\\.nuget\\packages\\microsoft.csharp\\4.3.0\\microsoft.csharp.4.3.0.nupkg.sha512",

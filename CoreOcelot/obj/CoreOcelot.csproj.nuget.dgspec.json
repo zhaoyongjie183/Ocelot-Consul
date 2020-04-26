@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Test\\CoreOcelot\\CoreOcelot\\CoreOcelot.csproj": {}
+    "E:\\Test\\Ocelot-Consul\\CoreOcelot\\CoreOcelot.csproj": {}
   },
   "projects": {
-    "E:\\Test\\CoreOcelot\\CoreOcelot\\CoreOcelot.csproj": {
+    "E:\\Test\\Ocelot-Consul\\CoreOcelot\\CoreOcelot.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Test\\CoreOcelot\\CoreOcelot\\CoreOcelot.csproj",
+        "projectUniqueName": "E:\\Test\\Ocelot-Consul\\CoreOcelot\\CoreOcelot.csproj",
         "projectName": "CoreOcelot",
-        "projectPath": "E:\\Test\\CoreOcelot\\CoreOcelot\\CoreOcelot.csproj",
+        "projectPath": "E:\\Test\\Ocelot-Consul\\CoreOcelot\\CoreOcelot.csproj",
         "packagesPath": "C:\\Users\\89372\\.nuget\\packages\\",
-        "outputPath": "E:\\Test\\CoreOcelot\\CoreOcelot\\obj\\",
+        "outputPath": "E:\\Test\\Ocelot-Consul\\CoreOcelot\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

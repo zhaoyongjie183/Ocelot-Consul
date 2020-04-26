@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Test\\CoreOcelot\\order-api\\order-api.csproj": {}
+    "E:\\Test\\Ocelot-Consul\\order-api\\order-api.csproj": {}
   },
   "projects": {
-    "E:\\Test\\CoreOcelot\\order-api\\order-api.csproj": {
+    "E:\\Test\\Ocelot-Consul\\order-api\\order-api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Test\\CoreOcelot\\order-api\\order-api.csproj",
+        "projectUniqueName": "E:\\Test\\Ocelot-Consul\\order-api\\order-api.csproj",
         "projectName": "order-api",
-        "projectPath": "E:\\Test\\CoreOcelot\\order-api\\order-api.csproj",
+        "projectPath": "E:\\Test\\Ocelot-Consul\\order-api\\order-api.csproj",
         "packagesPath": "C:\\Users\\89372\\.nuget\\packages\\",
-        "outputPath": "E:\\Test\\CoreOcelot\\order-api\\obj\\",
+        "outputPath": "E:\\Test\\Ocelot-Consul\\order-api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

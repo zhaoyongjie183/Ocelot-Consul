@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "K+vRggy3pDdgwXzvzcdtMmjF1Djext6xVVbRgpqXggDbwQm5sGxwtLLf39yvvnjqVMPl0ZQkONcJDoWAwMur2w==",
+  "dgSpecHash": "KE9pvLwj/OggJdlDSOboGsV5f5tpTSSuJHodndRcHWGNvbiszKU1ThJRmLYCsb1o/N+cm1phBJWknV7v4CHK0Q==",
   "success": true,
-  "projectFilePath": "E:\\Test\\CoreOcelot\\order-api\\order-api.csproj",
+  "projectFilePath": "E:\\Test\\Ocelot-Consul\\order-api\\order-api.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

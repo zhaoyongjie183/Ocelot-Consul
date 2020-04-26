@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "O/nC62H+VSg8TdIeqZwdVx9x5Imff3lpCeSt6bCAbdkc0FRtPh+vwnzxQkKCMyhSZn77TbDW4XEJI7VuQcEl+A==",
+  "dgSpecHash": "EUVI9DjvwLssp5qdzlvsaI5/C4Oq/+k6aT1tUOOMB6sLKEVEeaUWpysfjlC4QgcBCJHRJFL8H2l9+3LbgHmVOg==",
   "success": true,
-  "projectFilePath": "E:\\Test\\CoreOcelot\\product-api\\product-api.csproj",
+  "projectFilePath": "E:\\Test\\Ocelot-Consul\\product-api\\product-api.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

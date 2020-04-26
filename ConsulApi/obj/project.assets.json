@@ -5280,11 +5280,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Test\\CoreOcelot\\ConsulApi\\ConsulApi.csproj",
+      "projectUniqueName": "E:\\Test\\Ocelot-Consul\\ConsulApi\\ConsulApi.csproj",
       "projectName": "ConsulApi",
-      "projectPath": "E:\\Test\\CoreOcelot\\ConsulApi\\ConsulApi.csproj",
+      "projectPath": "E:\\Test\\Ocelot-Consul\\ConsulApi\\ConsulApi.csproj",
       "packagesPath": "C:\\Users\\89372\\.nuget\\packages\\",
-      "outputPath": "E:\\Test\\CoreOcelot\\ConsulApi\\obj\\",
+      "outputPath": "E:\\Test\\Ocelot-Consul\\ConsulApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

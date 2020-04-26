@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RbO/WsY9cqXm+OkYowCmvD3Kd2NpUDJRvLLAGo67rmRpheOIVDEe9b1H62r4vla9Jl+rjyaBR0eGbAxiPn64IQ==",
+  "dgSpecHash": "4GwZ1s9DKMrV+bnWj94g4jZE9q/lHTl9xY+J/8YLseh2rt7b3CNE01h/ZqAqdICkojaOKspuT9dsiKsKhufuZQ==",
   "success": true,
-  "projectFilePath": "E:\\Test\\CoreOcelot\\CoreOcelot\\CoreOcelot.csproj",
+  "projectFilePath": "E:\\Test\\Ocelot-Consul\\CoreOcelot\\CoreOcelot.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\89372\\.nuget\\packages\\consul\\0.7.2.6\\consul.0.7.2.6.nupkg.sha512",
     "C:\\Users\\89372\\.nuget\\packages\\fluentvalidation\\8.5.0\\fluentvalidation.8.5.0.nupkg.sha512",

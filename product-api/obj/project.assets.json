@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Test\\CoreOcelot\\product-api\\product-api.csproj",
+      "projectUniqueName": "E:\\Test\\Ocelot-Consul\\product-api\\product-api.csproj",
       "projectName": "product-api",
-      "projectPath": "E:\\Test\\CoreOcelot\\product-api\\product-api.csproj",
+      "projectPath": "E:\\Test\\Ocelot-Consul\\product-api\\product-api.csproj",
       "packagesPath": "C:\\Users\\89372\\.nuget\\packages\\",
-      "outputPath": "E:\\Test\\CoreOcelot\\product-api\\obj\\",
+      "outputPath": "E:\\Test\\Ocelot-Consul\\product-api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
