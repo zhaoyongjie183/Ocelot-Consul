@@ -26,6 +26,8 @@ namespace ConsulApi.Helper
 
             string healthCheckRelativeUrl = configuration.GetValue<string>("ServiceHealthCheck");
 
+            string Weight = configuration.GetValue<string>("Weight");
+
             var consulClient = new ConsulClient(x => {
 
                 x.Address = new Uri($"{consulClientUrl}");
@@ -44,7 +46,9 @@ namespace ConsulApi.Helper
 
                 HTTP = $"{healthCheckRelativeUrl}",//健康检查地址
 
-                Timeout = TimeSpan.FromSeconds(5)
+                Timeout = TimeSpan.FromSeconds(5),
+
+               
 
             };
 
@@ -64,7 +68,7 @@ namespace ConsulApi.Helper
 
                 Port = prot,
 
-                //Tags = new[] { $"urlprefix-/{healthService.Name}" }//添加 urlprefix-/servicename 格式的 tag 标签，以便 Fabio 识别
+                Tags = new[] { Weight}//配置权重
 
             };
 
