@@ -13,43 +13,55 @@
       //FileCacheOptions 缓存配置
       //QosOptions 服务质量与熔断
       //DownstreamHeaderTransform头信息转发
-      "DownstreamPathTemplate": "/api/{url}",
-      "DownstreamScheme": "https",
+      //"UseServiceDiscovery": true,//启用consul
+      //"ServiceName": "ServiceA", //这里配置consul服务的名称
+      //"DownstreamPathTemplate": "/api/{url}",
+      //"DownstreamScheme": "http",
+      //"UpstreamPathTemplate": "/T/{url}",
+      //"UpstreamHttpMethod": [ "Get", "Post" ],
+      //"LoadBalancerOptions": {
+      //  "Type": "RoundRobin" //轮询
+      //}
       //下游服务的地址，如果使用LoadBalancer的话这里可以填多项
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 44353
-        }
-      ],
+      //"DownstreamHostAndPorts": [
+      //  {
+      //    "Host": "localhost",
+      //    "Port": 5726
+      //  }
+      //],
       //负载均衡配置
       //LoadBalancer将决定负载均衡的算法
       //1、LeastConnection – 将请求发往最空闲的那个服务器
       //2、RoundRobin – 轮流发送
       //3、NoLoadBalance – 总是发往第一个请求或者是服务发现
       //"LoadBalancer": "LeastConnection",
-      "UpstreamPathTemplate": "/api/{url}",
-      "UpstreamHttpMethod": [ "Get","Post" ]
+
+
+      // 
+      //
+      //"LoadBalancerOptions": {
+      //  "Type": "RoundRobin" //轮询
+      //}
       //权限验证
       //"AuthenticationOptions": {
       //  "AuthenticationProviderKey": "TestKey",
       //  "AllowedScopes": []
       //}
       //"Key": "orders"
-    },
-    {
-      "DownstreamPathTemplate": "/api/products",
-      "DownstreamScheme": "https",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 44354
-        }
-      ],
-      "UpstreamPathTemplate": "/products",
-      "UpstreamHttpMethod": [ "Get" ]
-      //"Key": "products"
     }
+    //{
+    //  "DownstreamPathTemplate": "/api/products",
+    //  "DownstreamScheme": "https",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "localhost",
+    //      "Port": 5727
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/products",
+    //  "UpstreamHttpMethod": [ "Get" ]
+    //  //"Key": "products"
+    //}
 
   ],
   //请求聚合，当请求地址是http://localhose:XXXXX/的时候，会把两个reroute的数据一起返回
@@ -64,12 +76,21 @@
   //  }
   //],
   //全局请求设置
+
+  //配置consul的时候，如果ReRoutes配置为一个空集合，那么在进行访问动态路由服务时，需要加服务名称前缀，
+  //如/ServiceA/api/health，ServiceA即服务名称，访问ServiceB的路径则是/ServiceB/api/health，下图是s1，s2的访问结果
   "GlobalConfiguration": {
-    "BaseUrl": "https://localhost:44350",
+    "BaseUrl": null,
     "ServiceDiscoveryProvider": {
       "Host": "localhost",
       "Port": 8500,
       "Type": "Consul"
+    },
+    "UseServiceDiscovery": false,
+    "DownstreamScheme": "http",
+    "UpstreamHttpMethod": [ "Get", "Post" ],
+    "LoadBalancerOptions": {
+      "Type": "RoundRobin"
     }
   }
   //限流设置

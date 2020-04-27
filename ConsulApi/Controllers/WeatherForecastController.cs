@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 namespace ConsulApi.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[action]")]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
