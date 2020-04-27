@@ -1,0 +1,3 @@
+﻿1、nuget引入ocelot
+2、在startup类当中配置中间件
+3、复制一份ocelot.json配置文件
