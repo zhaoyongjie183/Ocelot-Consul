@@ -13,15 +13,19 @@
       //FileCacheOptions 缓存配置
       //QosOptions 服务质量与熔断
       //DownstreamHeaderTransform头信息转发
-      //"UseServiceDiscovery": true,//启用consul
-      //"ServiceName": "ServiceA", //这里配置consul服务的名称
-      //"DownstreamPathTemplate": "/api/{url}",
-      //"DownstreamScheme": "http",
-      //"UpstreamPathTemplate": "/T/{url}",
-      //"UpstreamHttpMethod": [ "Get", "Post" ],
-      //"LoadBalancerOptions": {
-      //  "Type": "RoundRobin" //轮询
-      //}
+      "UseServiceDiscovery": true, //启用consul
+      "ServiceName": "ServiceA", //这里配置consul服务的名称
+      "DownstreamPathTemplate": "/api/{url}",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/T/{url}",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin" //轮询
+      },
+      "FileCacheOptions": {
+        "TtlSeconds": 0, //过期时间
+        "Region": ""
+      }
       //下游服务的地址，如果使用LoadBalancer的话这里可以填多项
       //"DownstreamHostAndPorts": [
       //  {
@@ -85,14 +89,14 @@
       "Host": "localhost",
       "Port": 8500,
       "Type": "Consul"
-    },
-    "UseServiceDiscovery": false,
-    "DownstreamScheme": "http",
-    "UpstreamHttpMethod": [ "Get", "Post" ],
-    "LoadBalancerOptions": {
-      "Type": "RoundRobin"
     }
-  }
+    //"UseServiceDiscovery": false,
+    //"DownstreamScheme": "http",
+    //"UpstreamHttpMethod": [ "Get", "Post" ],
+    //"LoadBalancerOptions": {
+    //  "Type": "RoundRobin"
+    //}
+  },
   //限流设置
   //ClientWihteList 白名单
   //EnableRateLimiting 是否启用限流
@@ -108,6 +112,10 @@
   //  "Period": "1s",
   //  "PeriodTimespan": 1,
   //  "Limit": 1
+  //},
+  //"RateLimitOptions": {
+  //  "QuotaExceededMessage": "", //拦截返回的信息
+  //  "HttpStatusCode": 666//返回状态
   //},
   //服务质量与熔断
   //ExceptionsAllowedBeforeBreaking 允许多少个异常请求
