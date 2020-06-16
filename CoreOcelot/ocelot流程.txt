@@ -1,3 +1,6 @@
 ﻿1、nuget引入ocelot
 2、在startup类当中配置中间件
 3、复制一份ocelot.json配置文件
+什么是ocelot
+ocelot是一个网关，用于请求转发，并且可以集成consul的服务发现与注册
+使用consul的时候，api必须要注册consul这样才能做转发和请求

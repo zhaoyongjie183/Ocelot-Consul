@@ -15,17 +15,27 @@
       //DownstreamHeaderTransform头信息转发
       "UseServiceDiscovery": true, //启用consul
       "ServiceName": "ServiceA", //这里配置consul服务的名称
+      //"DownstreamPathTemplate": "/api/{url}",
+      //"DownstreamScheme": "http",
+      //"DownstreamHostAndPorts": [
+      //    {
+      //      "Host": "localhost",
+      //      "Port": 5727
+      //    }
+      //  ],
+      // "UpstreamPathTemplate": "/products/{url}",
+      // "UpstreamHttpMethod": [ "Get" ]
       "DownstreamPathTemplate": "/api/{url}",
       "DownstreamScheme": "http",
       "UpstreamPathTemplate": "/T/{url}",
       "UpstreamHttpMethod": [ "Get", "Post" ],
       "LoadBalancerOptions": {
         "Type": "RoundRobin" //轮询
-      },
-      "FileCacheOptions": {
-        "TtlSeconds": 0, //过期时间
-        "Region": ""
       }
+      //"FileCacheOptions": {
+      //  "TtlSeconds": 0, //过期时间
+      //  "Region": ""
+      //}
       //下游服务的地址，如果使用LoadBalancer的话这里可以填多项
       //"DownstreamHostAndPorts": [
       //  {
