@@ -1,0 +1,7 @@
+﻿1、新建一个webmvc项目
+2、删除 Controllers、Views、Model三个文件夹
+3、执行dotnet new -i identityserver4.templates（把模板下载到本地）
+dotnet new is4ui（安装模板）
+4、添加依赖注入和中间件
+
+

@@ -1,0 +1,4 @@
+﻿1、引入identityservice4的服务
+2、添加config文件，在文件里面添加需要的东西
+3、在startup里面注入identity4
+4、然后启动项目，在浏览器输入地址：http://localhost:端口号/.well-known/openid-configuration
