@@ -2,6 +2,7 @@
 // Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
 
 
+using IdentityModel;
 using IdentityServer4;
 using IdentityServer4.Models;
 using IdentityServer4.Test;
@@ -20,97 +21,121 @@ namespace IdentityServer4_Openid
                 {
                     SubjectId = "1",
                     Username = "alice",
-                    Password = "password",
-
-                    Claims = new []
+                    Password = "123456",
+                    Claims =
                     {
-                        new Claim("name", "Alice"),
-                        new Claim("website", "https://alice.com")
+                        new Claim(JwtClaimTypes.Name, "Alice Smith"),
+                        new Claim(JwtClaimTypes.GivenName, "Alice"),
+                        new Claim(JwtClaimTypes.FamilyName, "Smith"),
+                        new Claim(JwtClaimTypes.Email, "AliceSmith@email.com"),
+                        new Claim(JwtClaimTypes.EmailVerified, "true", ClaimValueTypes.Boolean),
+                        new Claim(JwtClaimTypes.WebSite, "http://alice.com"),
+                        new Claim(JwtClaimTypes.Address, @"{ 'street_address': 'One Hacker Way', 'locality': 'Heidelberg', 'postal_code': 69118, 'country': 'Germany' }", IdentityServer4.IdentityServerConstants.ClaimValueTypes.Json)
                     }
                 },
                 new TestUser
                 {
                     SubjectId = "2",
                     Username = "bob",
-                    Password = "password",
-
-                    Claims = new []
+                    Password = "123456",
+                     Claims =
                     {
-                        new Claim("name", "Bob"),
-                        new Claim("website", "https://bob.com")
+                        new Claim(JwtClaimTypes.Name, "Bob Smith"),
+                        new Claim(JwtClaimTypes.GivenName, "Bob"),
+                        new Claim(JwtClaimTypes.FamilyName, "Smith"),
+                        new Claim(JwtClaimTypes.Email, "BobSmith@email.com"),
+                        new Claim(JwtClaimTypes.EmailVerified, "true", ClaimValueTypes.Boolean),
+                        new Claim(JwtClaimTypes.WebSite, "http://bob.com"),
+                        new Claim(JwtClaimTypes.Address, @"{ 'street_address': 'One Hacker Way', 'locality': 'Heidelberg', 'postal_code': 69118, 'country': 'Germany' }", IdentityServer4.IdentityServerConstants.ClaimValueTypes.Json),
+                        new Claim("location", "somewhere")
                     }
                 }
             };
         }
-
         public static IEnumerable<IdentityResource> GetIdentityResources()
         {
-            return new List<IdentityResource>
+            return new IdentityResource[]
             {
                 new IdentityResources.OpenId(),
                 new IdentityResources.Profile(),
+                new IdentityResources.Address(),
+                new IdentityResources.Phone(),
+                new IdentityResources.Email()
             };
         }
 
         public static IEnumerable<ApiResource> GetApis()
         {
-            return new List<ApiResource>
+            return new ApiResource[]
             {
-                new ApiResource("api1", "My API")
+                new ApiResource("api1", "My API #1")
             };
         }
 
         public static IEnumerable<Client> GetClients()
         {
-            return new List<Client>
+            return new[]
             {
+                // client credentials flow client
                 new Client
                 {
-                    ClientId = "client",
+                    ClientId = "console client",
+                    ClientName = "Client Credentials Client",
 
-                    // no interactive user, use the clientid/secret for authentication
                     AllowedGrantTypes = GrantTypes.ClientCredentials,
 
-                    // secret for authentication
-                    ClientSecrets =
-                    {
-                        new Secret("secret".Sha256())
-                    },
+                    ClientSecrets = { new Secret("511536EF-F270-4058-80CA-1C89C192F69A".Sha256()) },
 
-                    // scopes that client has access to
                     AllowedScopes = { "api1" }
                 },
-                // resource owner password grant client
+
+                // wpf client, password grant
                 new Client
                 {
-                    ClientId = "ro.client",
+                    ClientId = "wpf client",
                     AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
-
                     ClientSecrets =
                     {
-                        new Secret("secret".Sha256())
+                        new Secret("wpf secrect".Sha256())
                     },
-                    AllowedScopes = { "api1" }
+                    AllowedScopes = {
+                        "api1",
+                        IdentityServerConstants.StandardScopes.OpenId,
+                        IdentityServerConstants.StandardScopes.Email,
+                        IdentityServerConstants.StandardScopes.Address,
+                        IdentityServerConstants.StandardScopes.Phone,
+                        IdentityServerConstants.StandardScopes.Profile }
                 },
-                // OpenID Connect implicit flow client (MVC)
+
+                // mvc client, authorization code
                 new Client
                 {
-                    ClientId = "mvc",
-                    ClientName = "MVC Client",
-                    AllowedGrantTypes = GrantTypes.Implicit,
-                
-                    // where to redirect to after login
+                    ClientId = "mvc client",
+                    ClientName = "ASP.NET Core MVC Client",
+
+                    AllowedGrantTypes = GrantTypes.CodeAndClientCredentials,
+                    ClientSecrets = { new Secret("mvc secret".Sha256()) },
+
                     RedirectUris = { "http://localhost:5002/signin-oidc" },
 
-                    // where to redirect to after logout
+                    FrontChannelLogoutUri = "http://localhost:5002/signout-oidc",
                     PostLogoutRedirectUris = { "http://localhost:5002/signout-callback-oidc" },
 
-                    AllowedScopes = new List<string>
+                    AlwaysIncludeUserClaimsInIdToken = true,
+
+                    AllowOfflineAccess = true, // offline_access
+                    AccessTokenLifetime = 60, // 60 seconds
+
+                    AllowedScopes =
                     {
+                        "api1",
                         IdentityServerConstants.StandardScopes.OpenId,
+                        IdentityServerConstants.StandardScopes.Email,
+                        IdentityServerConstants.StandardScopes.Address,
+                        IdentityServerConstants.StandardScopes.Phone,
                         IdentityServerConstants.StandardScopes.Profile
                     }
-                }
+                },
             };
         }
     }
