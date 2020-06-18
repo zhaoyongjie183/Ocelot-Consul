@@ -31,6 +31,24 @@ namespace OcelotIdentityService
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddOcelot().AddConsul().AddPolly();
+            services.AddAuthentication()
+                .AddIdentityServerAuthentication("client_b", options =>
+                {
+                    options.Authority = "http://localhost:5823";
+                    options.ApiName = "Api_ServerB";
+                    options.SupportedTokens = IdentityServer4.AccessTokenValidation.SupportedTokens.Both;
+                    options.ApiSecret = "secret";
+                    options.RequireHttpsMetadata = false;
+
+                }).AddIdentityServerAuthentication("client_a", options =>
+                {
+                    options.Authority = "http://localhost:5823";
+                    options.ApiName = "Api_ServerA";
+                    options.SupportedTokens = IdentityServer4.AccessTokenValidation.SupportedTokens.Both;
+                    options.ApiSecret = "secret";
+                    options.RequireHttpsMetadata = false;
+
+                }); ;
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

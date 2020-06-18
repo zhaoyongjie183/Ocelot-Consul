@@ -25,7 +25,7 @@ namespace IdentityServer4_Api.Controllers
         }
 
         [HttpGet]
-        [Authorize]
+        [Authorize(Roles ="admin")]
         public IEnumerable<WeatherForecast> Get()
         {
             var rng = new Random();

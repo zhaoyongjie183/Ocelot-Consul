@@ -187,3 +187,381 @@
 2020-06-18 11:29:35.426 +08:00 [DBG] Get profile called for subject 1 from client ASP.NET Core MVC Client with claim types ["name","family_name","given_name","middle_name","nickname","preferred_username","profile","picture","website","gender","birthdate","zoneinfo","locale","updated_at","address","phone_number","phone_number_verified","email","email_verified"] via ClaimsProviderIdentityToken
 2020-06-18 11:29:35.428 +08:00 [DBG] Issued claims: ["name","given_name","family_name","email","email_verified","website","address"]
 2020-06-18 11:29:35.436 +08:00 [DBG] Token request success.
+2020-06-18 22:51:28.102 +08:00 [INF] Starting IdentityServer4 version 3.1.3.0
+2020-06-18 22:51:28.144 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2020-06-18 22:51:28.148 +08:00 [INF] Using the default authentication scheme idsrv for IdentityServer
+2020-06-18 22:51:28.149 +08:00 [DBG] Using idsrv as default ASP.NET Core scheme for authentication
+2020-06-18 22:51:28.149 +08:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-in
+2020-06-18 22:51:28.150 +08:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-out
+2020-06-18 22:51:28.151 +08:00 [DBG] Using idsrv as default ASP.NET Core scheme for challenge
+2020-06-18 22:51:28.152 +08:00 [DBG] Using idsrv as default ASP.NET Core scheme for forbid
+2020-06-18 22:51:57.232 +08:00 [WRN] Failed to determine the https port for redirect.
+2020-06-18 22:51:57.268 +08:00 [DBG] Login Url: /Account/Login
+2020-06-18 22:51:57.269 +08:00 [DBG] Login Return Url Parameter: ReturnUrl
+2020-06-18 22:51:57.269 +08:00 [DBG] Logout Url: /Account/Logout
+2020-06-18 22:51:57.270 +08:00 [DBG] ConsentUrl Url: /consent
+2020-06-18 22:51:57.271 +08:00 [DBG] Consent Return Url Parameter: returnUrl
+2020-06-18 22:51:57.272 +08:00 [DBG] Error Url: /home/error
+2020-06-18 22:51:57.273 +08:00 [DBG] Error Id Parameter: errorId
+2020-06-18 22:51:57.289 +08:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2020-06-18 22:51:57.293 +08:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2020-06-18 22:51:57.294 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2020-06-18 22:51:57.297 +08:00 [DBG] Start discovery request
+2020-06-18 22:51:57.594 +08:00 [DBG] Request path /.well-known/openid-configuration/jwks matched to endpoint type Discovery
+2020-06-18 22:51:57.596 +08:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryKeyEndpoint
+2020-06-18 22:51:57.598 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2020-06-18 22:51:57.604 +08:00 [DBG] Start key discovery request
+2020-06-18 22:51:57.703 +08:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2020-06-18 22:51:57.715 +08:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2020-06-18 22:51:57.718 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2020-06-18 22:51:57.722 +08:00 [DBG] Start authorize request
+2020-06-18 22:51:57.729 +08:00 [DBG] No user present in authorize request
+2020-06-18 22:51:57.732 +08:00 [DBG] Start authorize request protocol validation
+2020-06-18 22:51:57.746 +08:00 [DBG] client configuration validation for client mvc client succeeded.
+2020-06-18 22:51:57.759 +08:00 [DBG] Checking for PKCE parameters
+2020-06-18 22:51:57.788 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2020-06-18 22:51:57.808 +08:00 [DBG] ValidatedAuthorizeRequest
+{"ClientId":"mvc client","ClientName":"ASP.NET Core MVC Client","RedirectUri":"http://localhost:5002/signin-oidc","AllowedRedirectUris":["http://localhost:5002/signin-oidc"],"SubjectId":"anonymous","ResponseType":"code","ResponseMode":"form_post","GrantType":"authorization_code","RequestedScopes":"api1 openid profile email phone address offline_access","State":"CfDJ8Mj69Gxn54FGm2tiBwk-z0tB4zILh8QpYolFHP4Ay0z_lzAtDPArJhdBtkFL10lkymGySWADOPVyi9hcmj1GsajvG72-bj8x-UcpCNQlaDBqkNrSM4BogXGpUjnZfVH2xfSUO163rOm3pO-S0HE7kuQYmmcfaoQQNWpbjnd0EeIf0nrcDfe1W7JYAWRLQDGkbpn4rA14DAv6dCQ5qf2cmDDNVlW2pPJRQLsfynD1c-LwCOrhWoIaHHp8cF3L1CjuiKP9Wqa5ioXm3BKOJSqS6WerhV8Nma0Xo1gj42usFOOG7c_Ns42VmqMCD5ahjHpZJ6ZMlGaiDrHRUw4D_ZLtt-d4IXKTBEvft2SLDjYW6zkzRR7iQ3h2tqvqCcZWQE8qFQ","UiLocales":null,"Nonce":"637280887176755232.NWQ2ZTc1NjItZTY3Mi00MDA2LThhZWEtNTA5YmEwNjFhYmFlMDUzZTIxYTMtZjRhZi00MjRlLTk0YjAtMDEwZTZhOGFkNzI3","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"","Raw":{"client_id":"mvc client","redirect_uri":"http://localhost:5002/signin-oidc","response_type":"code","scope":"api1 openid profile email phone address offline_access","code_challenge":"eUTTevxzLq3RW4IxuJOV4SyI7x9QHqILxYiR6lbaGNI","code_challenge_method":"S256","response_mode":"form_post","nonce":"637280887176755232.NWQ2ZTc1NjItZTY3Mi00MDA2LThhZWEtNTA5YmEwNjFhYmFlMDUzZTIxYTMtZjRhZi00MjRlLTk0YjAtMDEwZTZhOGFkNzI3","state":"CfDJ8Mj69Gxn54FGm2tiBwk-z0tB4zILh8QpYolFHP4Ay0z_lzAtDPArJhdBtkFL10lkymGySWADOPVyi9hcmj1GsajvG72-bj8x-UcpCNQlaDBqkNrSM4BogXGpUjnZfVH2xfSUO163rOm3pO-S0HE7kuQYmmcfaoQQNWpbjnd0EeIf0nrcDfe1W7JYAWRLQDGkbpn4rA14DAv6dCQ5qf2cmDDNVlW2pPJRQLsfynD1c-LwCOrhWoIaHHp8cF3L1CjuiKP9Wqa5ioXm3BKOJSqS6WerhV8Nma0Xo1gj42usFOOG7c_Ns42VmqMCD5ahjHpZJ6ZMlGaiDrHRUw4D_ZLtt-d4IXKTBEvft2SLDjYW6zkzRR7iQ3h2tqvqCcZWQE8qFQ","x-client-SKU":"ID_NETSTANDARD2_0","x-client-ver":"5.5.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2020-06-18 22:51:57.841 +08:00 [INF] Showing login: User is not authenticated
+2020-06-18 22:51:57.956 +08:00 [DBG] Start authorize request protocol validation
+2020-06-18 22:51:57.957 +08:00 [DBG] client configuration validation for client mvc client succeeded.
+2020-06-18 22:51:57.959 +08:00 [DBG] Checking for PKCE parameters
+2020-06-18 22:51:57.960 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2020-06-18 22:51:57.963 +08:00 [DBG] client configuration validation for client mvc client succeeded.
+2020-06-18 22:52:02.800 +08:00 [DBG] CORS request made for path: /Account/Login from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2020-06-18 22:52:02.848 +08:00 [DBG] Start authorize request protocol validation
+2020-06-18 22:52:02.849 +08:00 [DBG] client configuration validation for client mvc client succeeded.
+2020-06-18 22:52:02.850 +08:00 [DBG] Checking for PKCE parameters
+2020-06-18 22:52:02.851 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2020-06-18 22:52:02.861 +08:00 [DBG] Augmenting SignInContext
+2020-06-18 22:52:02.863 +08:00 [DBG] Adding idp claim with value: local
+2020-06-18 22:52:02.863 +08:00 [DBG] Adding amr claim with value: pwd
+2020-06-18 22:52:02.864 +08:00 [DBG] Adding auth_time claim with value: 1592491922
+2020-06-18 22:52:02.876 +08:00 [INF] AuthenticationScheme: idsrv signed in.
+2020-06-18 22:52:02.878 +08:00 [DBG] client configuration validation for client mvc client succeeded.
+2020-06-18 22:52:02.884 +08:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2020-06-18 22:52:02.885 +08:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2020-06-18 22:52:02.885 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2020-06-18 22:52:02.888 +08:00 [DBG] Start authorize callback request
+2020-06-18 22:52:02.892 +08:00 [DBG] User in authorize request: 1
+2020-06-18 22:52:02.892 +08:00 [DBG] Start authorize request protocol validation
+2020-06-18 22:52:02.893 +08:00 [DBG] client configuration validation for client mvc client succeeded.
+2020-06-18 22:52:02.893 +08:00 [DBG] Checking for PKCE parameters
+2020-06-18 22:52:02.894 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2020-06-18 22:52:02.895 +08:00 [DBG] ValidatedAuthorizeRequest
+{"ClientId":"mvc client","ClientName":"ASP.NET Core MVC Client","RedirectUri":"http://localhost:5002/signin-oidc","AllowedRedirectUris":["http://localhost:5002/signin-oidc"],"SubjectId":"1","ResponseType":"code","ResponseMode":"form_post","GrantType":"authorization_code","RequestedScopes":"api1 openid profile email phone address offline_access","State":"CfDJ8Mj69Gxn54FGm2tiBwk-z0tB4zILh8QpYolFHP4Ay0z_lzAtDPArJhdBtkFL10lkymGySWADOPVyi9hcmj1GsajvG72-bj8x-UcpCNQlaDBqkNrSM4BogXGpUjnZfVH2xfSUO163rOm3pO-S0HE7kuQYmmcfaoQQNWpbjnd0EeIf0nrcDfe1W7JYAWRLQDGkbpn4rA14DAv6dCQ5qf2cmDDNVlW2pPJRQLsfynD1c-LwCOrhWoIaHHp8cF3L1CjuiKP9Wqa5ioXm3BKOJSqS6WerhV8Nma0Xo1gj42usFOOG7c_Ns42VmqMCD5ahjHpZJ6ZMlGaiDrHRUw4D_ZLtt-d4IXKTBEvft2SLDjYW6zkzRR7iQ3h2tqvqCcZWQE8qFQ","UiLocales":null,"Nonce":"637280887176755232.NWQ2ZTc1NjItZTY3Mi00MDA2LThhZWEtNTA5YmEwNjFhYmFlMDUzZTIxYTMtZjRhZi00MjRlLTk0YjAtMDEwZTZhOGFkNzI3","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"bfU-k60uoezyLk5hxXbaHA","Raw":{"client_id":"mvc client","redirect_uri":"http://localhost:5002/signin-oidc","response_type":"code","scope":"api1 openid profile email phone address offline_access","code_challenge":"eUTTevxzLq3RW4IxuJOV4SyI7x9QHqILxYiR6lbaGNI","code_challenge_method":"S256","response_mode":"form_post","nonce":"637280887176755232.NWQ2ZTc1NjItZTY3Mi00MDA2LThhZWEtNTA5YmEwNjFhYmFlMDUzZTIxYTMtZjRhZi00MjRlLTk0YjAtMDEwZTZhOGFkNzI3","state":"CfDJ8Mj69Gxn54FGm2tiBwk-z0tB4zILh8QpYolFHP4Ay0z_lzAtDPArJhdBtkFL10lkymGySWADOPVyi9hcmj1GsajvG72-bj8x-UcpCNQlaDBqkNrSM4BogXGpUjnZfVH2xfSUO163rOm3pO-S0HE7kuQYmmcfaoQQNWpbjnd0EeIf0nrcDfe1W7JYAWRLQDGkbpn4rA14DAv6dCQ5qf2cmDDNVlW2pPJRQLsfynD1c-LwCOrhWoIaHHp8cF3L1CjuiKP9Wqa5ioXm3BKOJSqS6WerhV8Nma0Xo1gj42usFOOG7c_Ns42VmqMCD5ahjHpZJ6ZMlGaiDrHRUw4D_ZLtt-d4IXKTBEvft2SLDjYW6zkzRR7iQ3h2tqvqCcZWQE8qFQ","x-client-SKU":"ID_NETSTANDARD2_0","x-client-ver":"5.5.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2020-06-18 22:52:02.903 +08:00 [DBG] IsActive called from: AuthorizeEndpoint
+2020-06-18 22:52:02.908 +08:00 [DBG] Scopes contains offline_access, consent is required
+2020-06-18 22:52:02.909 +08:00 [INF] Showing consent: User has not yet consented
+2020-06-18 22:52:02.927 +08:00 [DBG] Start authorize request protocol validation
+2020-06-18 22:52:02.927 +08:00 [DBG] client configuration validation for client mvc client succeeded.
+2020-06-18 22:52:02.928 +08:00 [DBG] Checking for PKCE parameters
+2020-06-18 22:52:02.928 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2020-06-18 22:52:02.928 +08:00 [DBG] client configuration validation for client mvc client succeeded.
+2020-06-18 22:52:08.838 +08:00 [DBG] CORS request made for path: /Consent from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2020-06-18 22:52:08.873 +08:00 [DBG] Start authorize request protocol validation
+2020-06-18 22:52:08.874 +08:00 [DBG] client configuration validation for client mvc client succeeded.
+2020-06-18 22:52:08.875 +08:00 [DBG] Checking for PKCE parameters
+2020-06-18 22:52:08.875 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2020-06-18 22:52:08.890 +08:00 [DBG] client configuration validation for client mvc client succeeded.
+2020-06-18 22:52:08.895 +08:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2020-06-18 22:52:08.896 +08:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2020-06-18 22:52:08.897 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2020-06-18 22:52:08.897 +08:00 [DBG] Start authorize callback request
+2020-06-18 22:52:08.919 +08:00 [DBG] User in authorize request: 1
+2020-06-18 22:52:08.920 +08:00 [DBG] Start authorize request protocol validation
+2020-06-18 22:52:08.920 +08:00 [DBG] client configuration validation for client mvc client succeeded.
+2020-06-18 22:52:08.920 +08:00 [DBG] Checking for PKCE parameters
+2020-06-18 22:52:08.921 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2020-06-18 22:52:08.922 +08:00 [DBG] ValidatedAuthorizeRequest
+{"ClientId":"mvc client","ClientName":"ASP.NET Core MVC Client","RedirectUri":"http://localhost:5002/signin-oidc","AllowedRedirectUris":["http://localhost:5002/signin-oidc"],"SubjectId":"1","ResponseType":"code","ResponseMode":"form_post","GrantType":"authorization_code","RequestedScopes":"api1 openid profile email phone address offline_access","State":"CfDJ8Mj69Gxn54FGm2tiBwk-z0tB4zILh8QpYolFHP4Ay0z_lzAtDPArJhdBtkFL10lkymGySWADOPVyi9hcmj1GsajvG72-bj8x-UcpCNQlaDBqkNrSM4BogXGpUjnZfVH2xfSUO163rOm3pO-S0HE7kuQYmmcfaoQQNWpbjnd0EeIf0nrcDfe1W7JYAWRLQDGkbpn4rA14DAv6dCQ5qf2cmDDNVlW2pPJRQLsfynD1c-LwCOrhWoIaHHp8cF3L1CjuiKP9Wqa5ioXm3BKOJSqS6WerhV8Nma0Xo1gj42usFOOG7c_Ns42VmqMCD5ahjHpZJ6ZMlGaiDrHRUw4D_ZLtt-d4IXKTBEvft2SLDjYW6zkzRR7iQ3h2tqvqCcZWQE8qFQ","UiLocales":null,"Nonce":"637280887176755232.NWQ2ZTc1NjItZTY3Mi00MDA2LThhZWEtNTA5YmEwNjFhYmFlMDUzZTIxYTMtZjRhZi00MjRlLTk0YjAtMDEwZTZhOGFkNzI3","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"bfU-k60uoezyLk5hxXbaHA","Raw":{"client_id":"mvc client","redirect_uri":"http://localhost:5002/signin-oidc","response_type":"code","scope":"api1 openid profile email phone address offline_access","code_challenge":"eUTTevxzLq3RW4IxuJOV4SyI7x9QHqILxYiR6lbaGNI","code_challenge_method":"S256","response_mode":"form_post","nonce":"637280887176755232.NWQ2ZTc1NjItZTY3Mi00MDA2LThhZWEtNTA5YmEwNjFhYmFlMDUzZTIxYTMtZjRhZi00MjRlLTk0YjAtMDEwZTZhOGFkNzI3","state":"CfDJ8Mj69Gxn54FGm2tiBwk-z0tB4zILh8QpYolFHP4Ay0z_lzAtDPArJhdBtkFL10lkymGySWADOPVyi9hcmj1GsajvG72-bj8x-UcpCNQlaDBqkNrSM4BogXGpUjnZfVH2xfSUO163rOm3pO-S0HE7kuQYmmcfaoQQNWpbjnd0EeIf0nrcDfe1W7JYAWRLQDGkbpn4rA14DAv6dCQ5qf2cmDDNVlW2pPJRQLsfynD1c-LwCOrhWoIaHHp8cF3L1CjuiKP9Wqa5ioXm3BKOJSqS6WerhV8Nma0Xo1gj42usFOOG7c_Ns42VmqMCD5ahjHpZJ6ZMlGaiDrHRUw4D_ZLtt-d4IXKTBEvft2SLDjYW6zkzRR7iQ3h2tqvqCcZWQE8qFQ","x-client-SKU":"ID_NETSTANDARD2_0","x-client-ver":"5.5.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2020-06-18 22:52:08.927 +08:00 [DBG] IsActive called from: AuthorizeEndpoint
+2020-06-18 22:52:08.929 +08:00 [DBG] Scopes contains offline_access, consent is required
+2020-06-18 22:52:08.935 +08:00 [INF] User consented to scopes: ["openid","profile","address","phone","email","api1","offline_access"]
+2020-06-18 22:52:08.937 +08:00 [DBG] Client allows remembering consent, and no scopes provided. Removing consent from consent store for subject: 1
+2020-06-18 22:52:08.941 +08:00 [DBG] Creating Authorization Code Flow response.
+2020-06-18 22:52:08.972 +08:00 [DBG] Authorize endpoint response
+{"SubjectId":"1","ClientId":"mvc client","RedirectUri":"http://localhost:5002/signin-oidc","State":"CfDJ8Mj69Gxn54FGm2tiBwk-z0tB4zILh8QpYolFHP4Ay0z_lzAtDPArJhdBtkFL10lkymGySWADOPVyi9hcmj1GsajvG72-bj8x-UcpCNQlaDBqkNrSM4BogXGpUjnZfVH2xfSUO163rOm3pO-S0HE7kuQYmmcfaoQQNWpbjnd0EeIf0nrcDfe1W7JYAWRLQDGkbpn4rA14DAv6dCQ5qf2cmDDNVlW2pPJRQLsfynD1c-LwCOrhWoIaHHp8cF3L1CjuiKP9Wqa5ioXm3BKOJSqS6WerhV8Nma0Xo1gj42usFOOG7c_Ns42VmqMCD5ahjHpZJ6ZMlGaiDrHRUw4D_ZLtt-d4IXKTBEvft2SLDjYW6zkzRR7iQ3h2tqvqCcZWQE8qFQ","Scope":"openid profile email phone address api1 offline_access","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2020-06-18 22:52:08.981 +08:00 [DBG] Augmenting SignInContext
+2020-06-18 22:52:08.983 +08:00 [INF] AuthenticationScheme: idsrv signed in.
+2020-06-18 22:52:09.097 +08:00 [DBG] Request path /connect/token matched to endpoint type Token
+2020-06-18 22:52:09.102 +08:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2020-06-18 22:52:09.103 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2020-06-18 22:52:09.107 +08:00 [DBG] Start token request.
+2020-06-18 22:52:09.109 +08:00 [DBG] Start client validation
+2020-06-18 22:52:09.113 +08:00 [DBG] Start parsing Basic Authentication secret
+2020-06-18 22:52:09.117 +08:00 [DBG] Start parsing for secret in post body
+2020-06-18 22:52:09.118 +08:00 [DBG] Parser found secret: PostBodySecretParser
+2020-06-18 22:52:09.118 +08:00 [DBG] Secret id found: mvc client
+2020-06-18 22:52:09.119 +08:00 [DBG] client configuration validation for client mvc client succeeded.
+2020-06-18 22:52:09.128 +08:00 [DBG] Secret validator success: HashedSharedSecretValidator
+2020-06-18 22:52:09.129 +08:00 [DBG] Client validation success
+2020-06-18 22:52:09.156 +08:00 [DBG] Start token request validation
+2020-06-18 22:52:09.160 +08:00 [DBG] Start validation of authorization code token request
+2020-06-18 22:52:09.189 +08:00 [DBG] Client required a proof key for code exchange. Starting PKCE validation
+2020-06-18 22:52:09.191 +08:00 [DBG] IsActive called from: AuthorizationCodeValidation
+2020-06-18 22:52:09.191 +08:00 [DBG] Validation of authorization code token request success
+2020-06-18 22:52:09.193 +08:00 [INF] Token request validation success, {"ClientId":"mvc client","ClientName":"ASP.NET Core MVC Client","GrantType":"authorization_code","Scopes":null,"AuthorizationCode":"QIews4XBsyNSc-2R1faI4B9jUCf6LMq2HecX_6hcj-U","RefreshToken":null,"UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"client_id":"mvc client","client_secret":"***REDACTED***","code":"QIews4XBsyNSc-2R1faI4B9jUCf6LMq2HecX_6hcj-U","grant_type":"authorization_code","redirect_uri":"http://localhost:5002/signin-oidc","code_verifier":"xMHnwleZJ4GLca4NsCh1jS5caSUMeu2aBNhLq5uwHJY"},"$type":"TokenRequestValidationLog"}
+2020-06-18 22:52:09.205 +08:00 [DBG] client configuration validation for client mvc client succeeded.
+2020-06-18 22:52:09.222 +08:00 [DBG] Getting claims for access token for client: mvc client
+2020-06-18 22:52:09.223 +08:00 [DBG] Getting claims for access token for subject: 1
+2020-06-18 22:52:09.226 +08:00 [DBG] Get profile called for subject 1 from client ASP.NET Core MVC Client with claim types [] via ClaimsProviderAccessToken
+2020-06-18 22:52:09.227 +08:00 [DBG] Issued claims: []
+2020-06-18 22:52:09.319 +08:00 [DBG] Creating refresh token
+2020-06-18 22:52:09.320 +08:00 [DBG] Setting an absolute lifetime: 2592000
+2020-06-18 22:52:09.337 +08:00 [DBG] client configuration validation for client mvc client succeeded.
+2020-06-18 22:52:09.343 +08:00 [DBG] Getting claims for identity token for subject: 1 and client: mvc client
+2020-06-18 22:52:09.346 +08:00 [DBG] Get profile called for subject 1 from client ASP.NET Core MVC Client with claim types ["name","family_name","given_name","middle_name","nickname","preferred_username","profile","picture","website","gender","birthdate","zoneinfo","locale","updated_at","address","phone_number","phone_number_verified","email","email_verified"] via ClaimsProviderIdentityToken
+2020-06-18 22:52:09.349 +08:00 [DBG] Issued claims: ["name","given_name","family_name","email","email_verified","website","address"]
+2020-06-18 22:52:09.362 +08:00 [DBG] Token request success.
+2020-06-18 22:53:39.201 +08:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2020-06-18 22:53:39.203 +08:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2020-06-18 22:53:39.204 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2020-06-18 22:53:39.204 +08:00 [DBG] Start discovery request
+2020-06-18 22:53:39.387 +08:00 [DBG] Request path /.well-known/openid-configuration/jwks matched to endpoint type Discovery
+2020-06-18 22:53:39.388 +08:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryKeyEndpoint
+2020-06-18 22:53:39.388 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2020-06-18 22:53:39.389 +08:00 [DBG] Start key discovery request
+2020-06-18 22:53:39.426 +08:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2020-06-18 22:53:39.427 +08:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2020-06-18 22:53:39.427 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2020-06-18 22:53:39.428 +08:00 [DBG] Start authorize request
+2020-06-18 22:53:39.429 +08:00 [DBG] User in authorize request: 1
+2020-06-18 22:53:39.430 +08:00 [DBG] Start authorize request protocol validation
+2020-06-18 22:53:39.431 +08:00 [DBG] client configuration validation for client mvc client succeeded.
+2020-06-18 22:53:39.433 +08:00 [DBG] Checking for PKCE parameters
+2020-06-18 22:53:39.434 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2020-06-18 22:53:39.435 +08:00 [DBG] ValidatedAuthorizeRequest
+{"ClientId":"mvc client","ClientName":"ASP.NET Core MVC Client","RedirectUri":"http://localhost:5002/signin-oidc","AllowedRedirectUris":["http://localhost:5002/signin-oidc"],"SubjectId":"1","ResponseType":"code","ResponseMode":"form_post","GrantType":"authorization_code","RequestedScopes":"api1 openid profile email phone address offline_access","State":"CfDJ8Mj69Gxn54FGm2tiBwk-z0tTrbInswzK5Zkzt6T1WpVTE15cFI5n2fnh88ty8q1O36qw60U-Wzmk0bBspSOQAw7o97Fo-mAeei09dvSVKhATWbuLjqlox_RtbIu9WR01OUC60RKAOpvIIiZI_usHM_eeH0wNas9KJiSKJRuKSLs7-lxXlOsGvH_ru-uI1P-wzZ3ayfwvTfkLhNBVsunp4YQcc8f97mGmqXtPHUEJ5VsT6VzuysVBCGZpi8JilykeVl_HREBst34wj4fguxuJ_pMOz7pE1HNRmvH2Ete0-JUbir5OXBiYtuNXvURn9XUz4uZo6gMb4-aJAuzMKbwLn3FCs3uB4_FhdeSIg-v-Fq3RBB0cp1PkhHDK3e24T1ECrg","UiLocales":null,"Nonce":"637280888194123422.NjZjZTJkYWYtMmMwYy00ZTI2LTg2YWUtMTA5Y2IyYjk2ZjcxZDQ0OTM1MDYtNjcxMS00NDA2LWI3ZWEtMzhiZDc0OGU5MTI0","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"bfU-k60uoezyLk5hxXbaHA","Raw":{"client_id":"mvc client","redirect_uri":"http://localhost:5002/signin-oidc","response_type":"code","scope":"api1 openid profile email phone address offline_access","code_challenge":"wtBDTrqLKMuZGBRRtZedNMImBeI9fvOg_B13mHtG9BA","code_challenge_method":"S256","response_mode":"form_post","nonce":"637280888194123422.NjZjZTJkYWYtMmMwYy00ZTI2LTg2YWUtMTA5Y2IyYjk2ZjcxZDQ0OTM1MDYtNjcxMS00NDA2LWI3ZWEtMzhiZDc0OGU5MTI0","state":"CfDJ8Mj69Gxn54FGm2tiBwk-z0tTrbInswzK5Zkzt6T1WpVTE15cFI5n2fnh88ty8q1O36qw60U-Wzmk0bBspSOQAw7o97Fo-mAeei09dvSVKhATWbuLjqlox_RtbIu9WR01OUC60RKAOpvIIiZI_usHM_eeH0wNas9KJiSKJRuKSLs7-lxXlOsGvH_ru-uI1P-wzZ3ayfwvTfkLhNBVsunp4YQcc8f97mGmqXtPHUEJ5VsT6VzuysVBCGZpi8JilykeVl_HREBst34wj4fguxuJ_pMOz7pE1HNRmvH2Ete0-JUbir5OXBiYtuNXvURn9XUz4uZo6gMb4-aJAuzMKbwLn3FCs3uB4_FhdeSIg-v-Fq3RBB0cp1PkhHDK3e24T1ECrg","x-client-SKU":"ID_NETSTANDARD2_0","x-client-ver":"5.5.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2020-06-18 22:53:39.443 +08:00 [DBG] IsActive called from: AuthorizeEndpoint
+2020-06-18 22:53:39.443 +08:00 [DBG] Scopes contains offline_access, consent is required
+2020-06-18 22:53:39.444 +08:00 [INF] Showing consent: User has not yet consented
+2020-06-18 22:53:39.453 +08:00 [DBG] Start authorize request protocol validation
+2020-06-18 22:53:39.454 +08:00 [DBG] client configuration validation for client mvc client succeeded.
+2020-06-18 22:53:39.455 +08:00 [DBG] Checking for PKCE parameters
+2020-06-18 22:53:39.455 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2020-06-18 22:53:39.456 +08:00 [DBG] client configuration validation for client mvc client succeeded.
+2020-06-18 22:53:42.197 +08:00 [DBG] CORS request made for path: /Consent from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2020-06-18 22:53:42.209 +08:00 [DBG] Start authorize request protocol validation
+2020-06-18 22:53:42.210 +08:00 [DBG] client configuration validation for client mvc client succeeded.
+2020-06-18 22:53:42.215 +08:00 [DBG] Checking for PKCE parameters
+2020-06-18 22:53:42.217 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2020-06-18 22:53:42.221 +08:00 [DBG] client configuration validation for client mvc client succeeded.
+2020-06-18 22:53:42.229 +08:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2020-06-18 22:53:42.234 +08:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2020-06-18 22:53:42.235 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2020-06-18 22:53:42.235 +08:00 [DBG] Start authorize callback request
+2020-06-18 22:53:42.237 +08:00 [DBG] User in authorize request: 1
+2020-06-18 22:53:42.238 +08:00 [DBG] Start authorize request protocol validation
+2020-06-18 22:53:42.239 +08:00 [DBG] client configuration validation for client mvc client succeeded.
+2020-06-18 22:53:42.239 +08:00 [DBG] Checking for PKCE parameters
+2020-06-18 22:53:42.240 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2020-06-18 22:53:42.241 +08:00 [DBG] ValidatedAuthorizeRequest
+{"ClientId":"mvc client","ClientName":"ASP.NET Core MVC Client","RedirectUri":"http://localhost:5002/signin-oidc","AllowedRedirectUris":["http://localhost:5002/signin-oidc"],"SubjectId":"1","ResponseType":"code","ResponseMode":"form_post","GrantType":"authorization_code","RequestedScopes":"api1 openid profile email phone address offline_access","State":"CfDJ8Mj69Gxn54FGm2tiBwk-z0tTrbInswzK5Zkzt6T1WpVTE15cFI5n2fnh88ty8q1O36qw60U-Wzmk0bBspSOQAw7o97Fo-mAeei09dvSVKhATWbuLjqlox_RtbIu9WR01OUC60RKAOpvIIiZI_usHM_eeH0wNas9KJiSKJRuKSLs7-lxXlOsGvH_ru-uI1P-wzZ3ayfwvTfkLhNBVsunp4YQcc8f97mGmqXtPHUEJ5VsT6VzuysVBCGZpi8JilykeVl_HREBst34wj4fguxuJ_pMOz7pE1HNRmvH2Ete0-JUbir5OXBiYtuNXvURn9XUz4uZo6gMb4-aJAuzMKbwLn3FCs3uB4_FhdeSIg-v-Fq3RBB0cp1PkhHDK3e24T1ECrg","UiLocales":null,"Nonce":"637280888194123422.NjZjZTJkYWYtMmMwYy00ZTI2LTg2YWUtMTA5Y2IyYjk2ZjcxZDQ0OTM1MDYtNjcxMS00NDA2LWI3ZWEtMzhiZDc0OGU5MTI0","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"bfU-k60uoezyLk5hxXbaHA","Raw":{"client_id":"mvc client","redirect_uri":"http://localhost:5002/signin-oidc","response_type":"code","scope":"api1 openid profile email phone address offline_access","code_challenge":"wtBDTrqLKMuZGBRRtZedNMImBeI9fvOg_B13mHtG9BA","code_challenge_method":"S256","response_mode":"form_post","nonce":"637280888194123422.NjZjZTJkYWYtMmMwYy00ZTI2LTg2YWUtMTA5Y2IyYjk2ZjcxZDQ0OTM1MDYtNjcxMS00NDA2LWI3ZWEtMzhiZDc0OGU5MTI0","state":"CfDJ8Mj69Gxn54FGm2tiBwk-z0tTrbInswzK5Zkzt6T1WpVTE15cFI5n2fnh88ty8q1O36qw60U-Wzmk0bBspSOQAw7o97Fo-mAeei09dvSVKhATWbuLjqlox_RtbIu9WR01OUC60RKAOpvIIiZI_usHM_eeH0wNas9KJiSKJRuKSLs7-lxXlOsGvH_ru-uI1P-wzZ3ayfwvTfkLhNBVsunp4YQcc8f97mGmqXtPHUEJ5VsT6VzuysVBCGZpi8JilykeVl_HREBst34wj4fguxuJ_pMOz7pE1HNRmvH2Ete0-JUbir5OXBiYtuNXvURn9XUz4uZo6gMb4-aJAuzMKbwLn3FCs3uB4_FhdeSIg-v-Fq3RBB0cp1PkhHDK3e24T1ECrg","x-client-SKU":"ID_NETSTANDARD2_0","x-client-ver":"5.5.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2020-06-18 22:53:42.246 +08:00 [DBG] IsActive called from: AuthorizeEndpoint
+2020-06-18 22:53:42.247 +08:00 [DBG] Scopes contains offline_access, consent is required
+2020-06-18 22:53:42.247 +08:00 [INF] User consented to scopes: ["openid","profile","address","phone","email","api1","offline_access"]
+2020-06-18 22:53:42.248 +08:00 [DBG] Client allows remembering consent, and no scopes provided. Removing consent from consent store for subject: 1
+2020-06-18 22:53:42.249 +08:00 [DBG] Creating Authorization Code Flow response.
+2020-06-18 22:53:42.250 +08:00 [DBG] Authorize endpoint response
+{"SubjectId":"1","ClientId":"mvc client","RedirectUri":"http://localhost:5002/signin-oidc","State":"CfDJ8Mj69Gxn54FGm2tiBwk-z0tTrbInswzK5Zkzt6T1WpVTE15cFI5n2fnh88ty8q1O36qw60U-Wzmk0bBspSOQAw7o97Fo-mAeei09dvSVKhATWbuLjqlox_RtbIu9WR01OUC60RKAOpvIIiZI_usHM_eeH0wNas9KJiSKJRuKSLs7-lxXlOsGvH_ru-uI1P-wzZ3ayfwvTfkLhNBVsunp4YQcc8f97mGmqXtPHUEJ5VsT6VzuysVBCGZpi8JilykeVl_HREBst34wj4fguxuJ_pMOz7pE1HNRmvH2Ete0-JUbir5OXBiYtuNXvURn9XUz4uZo6gMb4-aJAuzMKbwLn3FCs3uB4_FhdeSIg-v-Fq3RBB0cp1PkhHDK3e24T1ECrg","Scope":"openid profile email phone address api1 offline_access","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2020-06-18 22:53:42.367 +08:00 [DBG] Request path /connect/token matched to endpoint type Token
+2020-06-18 22:53:42.368 +08:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2020-06-18 22:53:42.369 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2020-06-18 22:53:42.370 +08:00 [DBG] Start token request.
+2020-06-18 22:53:42.371 +08:00 [DBG] Start client validation
+2020-06-18 22:53:42.371 +08:00 [DBG] Start parsing Basic Authentication secret
+2020-06-18 22:53:42.372 +08:00 [DBG] Start parsing for secret in post body
+2020-06-18 22:53:42.372 +08:00 [DBG] Parser found secret: PostBodySecretParser
+2020-06-18 22:53:42.373 +08:00 [DBG] Secret id found: mvc client
+2020-06-18 22:53:42.373 +08:00 [DBG] client configuration validation for client mvc client succeeded.
+2020-06-18 22:53:42.374 +08:00 [DBG] Secret validator success: HashedSharedSecretValidator
+2020-06-18 22:53:42.374 +08:00 [DBG] Client validation success
+2020-06-18 22:53:42.375 +08:00 [DBG] Start token request validation
+2020-06-18 22:53:42.375 +08:00 [DBG] Start validation of authorization code token request
+2020-06-18 22:53:42.376 +08:00 [DBG] Client required a proof key for code exchange. Starting PKCE validation
+2020-06-18 22:53:42.376 +08:00 [DBG] IsActive called from: AuthorizationCodeValidation
+2020-06-18 22:53:42.377 +08:00 [DBG] Validation of authorization code token request success
+2020-06-18 22:53:42.377 +08:00 [INF] Token request validation success, {"ClientId":"mvc client","ClientName":"ASP.NET Core MVC Client","GrantType":"authorization_code","Scopes":null,"AuthorizationCode":"1pOLOCyTqiW8JGtmRMDYuT4lZ-PpSiZPq_q8Ms-oMCc","RefreshToken":null,"UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"client_id":"mvc client","client_secret":"***REDACTED***","code":"1pOLOCyTqiW8JGtmRMDYuT4lZ-PpSiZPq_q8Ms-oMCc","grant_type":"authorization_code","redirect_uri":"http://localhost:5002/signin-oidc","code_verifier":"fezwIWbDvfoB6uzkCy9LdvWQBA7pufKxhEdRecz46b8"},"$type":"TokenRequestValidationLog"}
+2020-06-18 22:53:42.380 +08:00 [DBG] client configuration validation for client mvc client succeeded.
+2020-06-18 22:53:42.381 +08:00 [DBG] Getting claims for access token for client: mvc client
+2020-06-18 22:53:42.382 +08:00 [DBG] Getting claims for access token for subject: 1
+2020-06-18 22:53:42.382 +08:00 [DBG] Get profile called for subject 1 from client ASP.NET Core MVC Client with claim types [] via ClaimsProviderAccessToken
+2020-06-18 22:53:42.383 +08:00 [DBG] Issued claims: []
+2020-06-18 22:53:42.387 +08:00 [DBG] Creating refresh token
+2020-06-18 22:53:42.388 +08:00 [DBG] Setting an absolute lifetime: 2592000
+2020-06-18 22:53:42.389 +08:00 [DBG] client configuration validation for client mvc client succeeded.
+2020-06-18 22:53:42.389 +08:00 [DBG] Getting claims for identity token for subject: 1 and client: mvc client
+2020-06-18 22:53:42.390 +08:00 [DBG] Get profile called for subject 1 from client ASP.NET Core MVC Client with claim types ["name","family_name","given_name","middle_name","nickname","preferred_username","profile","picture","website","gender","birthdate","zoneinfo","locale","updated_at","address","phone_number","phone_number_verified","email","email_verified"] via ClaimsProviderIdentityToken
+2020-06-18 22:53:42.392 +08:00 [DBG] Issued claims: ["name","given_name","family_name","email","email_verified","website","address"]
+2020-06-18 22:53:42.396 +08:00 [DBG] Token request success.
+2020-06-18 22:58:28.809 +08:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2020-06-18 22:58:28.815 +08:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2020-06-18 22:58:28.815 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2020-06-18 22:58:28.816 +08:00 [DBG] Start discovery request
+2020-06-18 22:58:29.007 +08:00 [DBG] Request path /.well-known/openid-configuration/jwks matched to endpoint type Discovery
+2020-06-18 22:58:29.009 +08:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryKeyEndpoint
+2020-06-18 22:58:29.010 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2020-06-18 22:58:29.011 +08:00 [DBG] Start key discovery request
+2020-06-18 22:58:29.048 +08:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2020-06-18 22:58:29.053 +08:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2020-06-18 22:58:29.054 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2020-06-18 22:58:29.055 +08:00 [DBG] Start authorize request
+2020-06-18 22:58:29.056 +08:00 [DBG] User in authorize request: 1
+2020-06-18 22:58:29.057 +08:00 [DBG] Start authorize request protocol validation
+2020-06-18 22:58:29.058 +08:00 [DBG] client configuration validation for client mvc client succeeded.
+2020-06-18 22:58:29.059 +08:00 [DBG] Checking for PKCE parameters
+2020-06-18 22:58:29.061 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2020-06-18 22:58:29.063 +08:00 [DBG] ValidatedAuthorizeRequest
+{"ClientId":"mvc client","ClientName":"ASP.NET Core MVC Client","RedirectUri":"http://localhost:5002/signin-oidc","AllowedRedirectUris":["http://localhost:5002/signin-oidc"],"SubjectId":"1","ResponseType":"code","ResponseMode":"form_post","GrantType":"authorization_code","RequestedScopes":"api1 openid profile email phone address offline_access","State":"CfDJ8Mj69Gxn54FGm2tiBwk-z0ujGY-Fyo9IG2grRkx726q_jQE-HvNaCX20ml2Q_VbmrK1KRY1G1XhzgpO_pdqORQA0wMzgXcmOj1-tz-586mt_LmwDhpGe2J1ZWZqUjU_kn97zFD_txBAlfh9JVlWx5B2zDrOFST0iqxTdbgV3vF-kwhzljQjiecCg59l8LjoXLYtlrtrF2zlq5qdX6LE2-cpBY3Hw7WHYTJ6tHsjk7adkJSvt1EwjvuhMTFORF363LB3rgb5tWfNJP0pjI-TUhHRhukFcTrfx2fdmbrv2rfpFa-DYUOKk4SFEROH6MKy1hyXaWTtTvSdbJRzp0qA2jrk39yw6IoFsaTZnaLaDRWPhQSAVpAqN72X96CfaQsSw6w","UiLocales":null,"Nonce":"637280891090369078.YWNkNjYzOWUtZDI1OS00MjY4LThmYWYtZGM2MDMxZWY0MDhmZThhODZiMmQtZGY2MC00YmI2LWJmOGYtMGE2OWYzZTU1NGM2","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"bfU-k60uoezyLk5hxXbaHA","Raw":{"client_id":"mvc client","redirect_uri":"http://localhost:5002/signin-oidc","response_type":"code","scope":"api1 openid profile email phone address offline_access","code_challenge":"Uc352FKHbx7bIoqi9EW8C-Fona1ZkIQl8aLMxeZbFKw","code_challenge_method":"S256","response_mode":"form_post","nonce":"637280891090369078.YWNkNjYzOWUtZDI1OS00MjY4LThmYWYtZGM2MDMxZWY0MDhmZThhODZiMmQtZGY2MC00YmI2LWJmOGYtMGE2OWYzZTU1NGM2","state":"CfDJ8Mj69Gxn54FGm2tiBwk-z0ujGY-Fyo9IG2grRkx726q_jQE-HvNaCX20ml2Q_VbmrK1KRY1G1XhzgpO_pdqORQA0wMzgXcmOj1-tz-586mt_LmwDhpGe2J1ZWZqUjU_kn97zFD_txBAlfh9JVlWx5B2zDrOFST0iqxTdbgV3vF-kwhzljQjiecCg59l8LjoXLYtlrtrF2zlq5qdX6LE2-cpBY3Hw7WHYTJ6tHsjk7adkJSvt1EwjvuhMTFORF363LB3rgb5tWfNJP0pjI-TUhHRhukFcTrfx2fdmbrv2rfpFa-DYUOKk4SFEROH6MKy1hyXaWTtTvSdbJRzp0qA2jrk39yw6IoFsaTZnaLaDRWPhQSAVpAqN72X96CfaQsSw6w","x-client-SKU":"ID_NETSTANDARD2_0","x-client-ver":"5.5.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2020-06-18 22:58:29.070 +08:00 [DBG] IsActive called from: AuthorizeEndpoint
+2020-06-18 22:58:29.070 +08:00 [DBG] Scopes contains offline_access, consent is required
+2020-06-18 22:58:29.070 +08:00 [INF] Showing consent: User has not yet consented
+2020-06-18 22:58:29.077 +08:00 [DBG] Start authorize request protocol validation
+2020-06-18 22:58:29.078 +08:00 [DBG] client configuration validation for client mvc client succeeded.
+2020-06-18 22:58:29.080 +08:00 [DBG] Checking for PKCE parameters
+2020-06-18 22:58:29.080 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2020-06-18 22:58:29.081 +08:00 [DBG] client configuration validation for client mvc client succeeded.
+2020-06-18 22:58:31.697 +08:00 [DBG] CORS request made for path: /Consent from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2020-06-18 22:58:31.701 +08:00 [DBG] Start authorize request protocol validation
+2020-06-18 22:58:31.702 +08:00 [DBG] client configuration validation for client mvc client succeeded.
+2020-06-18 22:58:31.704 +08:00 [DBG] Checking for PKCE parameters
+2020-06-18 22:58:31.707 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2020-06-18 22:58:31.711 +08:00 [DBG] client configuration validation for client mvc client succeeded.
+2020-06-18 22:58:31.716 +08:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2020-06-18 22:58:31.717 +08:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2020-06-18 22:58:31.717 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2020-06-18 22:58:31.718 +08:00 [DBG] Start authorize callback request
+2020-06-18 22:58:31.721 +08:00 [DBG] User in authorize request: 1
+2020-06-18 22:58:31.723 +08:00 [DBG] Start authorize request protocol validation
+2020-06-18 22:58:31.724 +08:00 [DBG] client configuration validation for client mvc client succeeded.
+2020-06-18 22:58:31.725 +08:00 [DBG] Checking for PKCE parameters
+2020-06-18 22:58:31.726 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2020-06-18 22:58:31.727 +08:00 [DBG] ValidatedAuthorizeRequest
+{"ClientId":"mvc client","ClientName":"ASP.NET Core MVC Client","RedirectUri":"http://localhost:5002/signin-oidc","AllowedRedirectUris":["http://localhost:5002/signin-oidc"],"SubjectId":"1","ResponseType":"code","ResponseMode":"form_post","GrantType":"authorization_code","RequestedScopes":"api1 openid profile email phone address offline_access","State":"CfDJ8Mj69Gxn54FGm2tiBwk-z0ujGY-Fyo9IG2grRkx726q_jQE-HvNaCX20ml2Q_VbmrK1KRY1G1XhzgpO_pdqORQA0wMzgXcmOj1-tz-586mt_LmwDhpGe2J1ZWZqUjU_kn97zFD_txBAlfh9JVlWx5B2zDrOFST0iqxTdbgV3vF-kwhzljQjiecCg59l8LjoXLYtlrtrF2zlq5qdX6LE2-cpBY3Hw7WHYTJ6tHsjk7adkJSvt1EwjvuhMTFORF363LB3rgb5tWfNJP0pjI-TUhHRhukFcTrfx2fdmbrv2rfpFa-DYUOKk4SFEROH6MKy1hyXaWTtTvSdbJRzp0qA2jrk39yw6IoFsaTZnaLaDRWPhQSAVpAqN72X96CfaQsSw6w","UiLocales":null,"Nonce":"637280891090369078.YWNkNjYzOWUtZDI1OS00MjY4LThmYWYtZGM2MDMxZWY0MDhmZThhODZiMmQtZGY2MC00YmI2LWJmOGYtMGE2OWYzZTU1NGM2","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"bfU-k60uoezyLk5hxXbaHA","Raw":{"client_id":"mvc client","redirect_uri":"http://localhost:5002/signin-oidc","response_type":"code","scope":"api1 openid profile email phone address offline_access","code_challenge":"Uc352FKHbx7bIoqi9EW8C-Fona1ZkIQl8aLMxeZbFKw","code_challenge_method":"S256","response_mode":"form_post","nonce":"637280891090369078.YWNkNjYzOWUtZDI1OS00MjY4LThmYWYtZGM2MDMxZWY0MDhmZThhODZiMmQtZGY2MC00YmI2LWJmOGYtMGE2OWYzZTU1NGM2","state":"CfDJ8Mj69Gxn54FGm2tiBwk-z0ujGY-Fyo9IG2grRkx726q_jQE-HvNaCX20ml2Q_VbmrK1KRY1G1XhzgpO_pdqORQA0wMzgXcmOj1-tz-586mt_LmwDhpGe2J1ZWZqUjU_kn97zFD_txBAlfh9JVlWx5B2zDrOFST0iqxTdbgV3vF-kwhzljQjiecCg59l8LjoXLYtlrtrF2zlq5qdX6LE2-cpBY3Hw7WHYTJ6tHsjk7adkJSvt1EwjvuhMTFORF363LB3rgb5tWfNJP0pjI-TUhHRhukFcTrfx2fdmbrv2rfpFa-DYUOKk4SFEROH6MKy1hyXaWTtTvSdbJRzp0qA2jrk39yw6IoFsaTZnaLaDRWPhQSAVpAqN72X96CfaQsSw6w","x-client-SKU":"ID_NETSTANDARD2_0","x-client-ver":"5.5.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2020-06-18 22:58:31.732 +08:00 [DBG] IsActive called from: AuthorizeEndpoint
+2020-06-18 22:58:31.733 +08:00 [DBG] Scopes contains offline_access, consent is required
+2020-06-18 22:58:31.734 +08:00 [INF] User consented to scopes: ["openid","profile","address","phone","email","api1","offline_access"]
+2020-06-18 22:58:31.735 +08:00 [DBG] Client allows remembering consent, and no scopes provided. Removing consent from consent store for subject: 1
+2020-06-18 22:58:31.737 +08:00 [DBG] Creating Authorization Code Flow response.
+2020-06-18 22:58:31.742 +08:00 [DBG] Authorize endpoint response
+{"SubjectId":"1","ClientId":"mvc client","RedirectUri":"http://localhost:5002/signin-oidc","State":"CfDJ8Mj69Gxn54FGm2tiBwk-z0ujGY-Fyo9IG2grRkx726q_jQE-HvNaCX20ml2Q_VbmrK1KRY1G1XhzgpO_pdqORQA0wMzgXcmOj1-tz-586mt_LmwDhpGe2J1ZWZqUjU_kn97zFD_txBAlfh9JVlWx5B2zDrOFST0iqxTdbgV3vF-kwhzljQjiecCg59l8LjoXLYtlrtrF2zlq5qdX6LE2-cpBY3Hw7WHYTJ6tHsjk7adkJSvt1EwjvuhMTFORF363LB3rgb5tWfNJP0pjI-TUhHRhukFcTrfx2fdmbrv2rfpFa-DYUOKk4SFEROH6MKy1hyXaWTtTvSdbJRzp0qA2jrk39yw6IoFsaTZnaLaDRWPhQSAVpAqN72X96CfaQsSw6w","Scope":"openid profile email phone address api1 offline_access","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2020-06-18 22:58:31.878 +08:00 [DBG] Request path /connect/token matched to endpoint type Token
+2020-06-18 22:58:31.885 +08:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2020-06-18 22:58:31.886 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2020-06-18 22:58:31.886 +08:00 [DBG] Start token request.
+2020-06-18 22:58:31.886 +08:00 [DBG] Start client validation
+2020-06-18 22:58:31.887 +08:00 [DBG] Start parsing Basic Authentication secret
+2020-06-18 22:58:31.888 +08:00 [DBG] Start parsing for secret in post body
+2020-06-18 22:58:31.888 +08:00 [DBG] Parser found secret: PostBodySecretParser
+2020-06-18 22:58:31.889 +08:00 [DBG] Secret id found: mvc client
+2020-06-18 22:58:31.889 +08:00 [DBG] client configuration validation for client mvc client succeeded.
+2020-06-18 22:58:31.890 +08:00 [DBG] Secret validator success: HashedSharedSecretValidator
+2020-06-18 22:58:31.890 +08:00 [DBG] Client validation success
+2020-06-18 22:58:31.890 +08:00 [DBG] Start token request validation
+2020-06-18 22:58:31.891 +08:00 [DBG] Start validation of authorization code token request
+2020-06-18 22:58:31.892 +08:00 [DBG] Client required a proof key for code exchange. Starting PKCE validation
+2020-06-18 22:58:31.893 +08:00 [DBG] IsActive called from: AuthorizationCodeValidation
+2020-06-18 22:58:31.893 +08:00 [DBG] Validation of authorization code token request success
+2020-06-18 22:58:31.894 +08:00 [INF] Token request validation success, {"ClientId":"mvc client","ClientName":"ASP.NET Core MVC Client","GrantType":"authorization_code","Scopes":null,"AuthorizationCode":"i46jK1mIJxiRrF1KhkMT7ASB9x88SbfxdX8WvrCzTsY","RefreshToken":null,"UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"client_id":"mvc client","client_secret":"***REDACTED***","code":"i46jK1mIJxiRrF1KhkMT7ASB9x88SbfxdX8WvrCzTsY","grant_type":"authorization_code","redirect_uri":"http://localhost:5002/signin-oidc","code_verifier":"rUpH1CNOn5zSdyUA-uUFGTu4QCZFUqSr10B5mGkFYi0"},"$type":"TokenRequestValidationLog"}
+2020-06-18 22:58:31.897 +08:00 [DBG] client configuration validation for client mvc client succeeded.
+2020-06-18 22:58:31.898 +08:00 [DBG] Getting claims for access token for client: mvc client
+2020-06-18 22:58:31.899 +08:00 [DBG] Getting claims for access token for subject: 1
+2020-06-18 22:58:31.900 +08:00 [DBG] Get profile called for subject 1 from client ASP.NET Core MVC Client with claim types [] via ClaimsProviderAccessToken
+2020-06-18 22:58:31.901 +08:00 [DBG] Issued claims: []
+2020-06-18 22:58:31.906 +08:00 [DBG] Creating refresh token
+2020-06-18 22:58:31.906 +08:00 [DBG] Setting an absolute lifetime: 2592000
+2020-06-18 22:58:31.907 +08:00 [DBG] client configuration validation for client mvc client succeeded.
+2020-06-18 22:58:31.907 +08:00 [DBG] Getting claims for identity token for subject: 1 and client: mvc client
+2020-06-18 22:58:31.908 +08:00 [DBG] Get profile called for subject 1 from client ASP.NET Core MVC Client with claim types ["name","family_name","given_name","middle_name","nickname","preferred_username","profile","picture","website","gender","birthdate","zoneinfo","locale","updated_at","address","phone_number","phone_number_verified","email","email_verified"] via ClaimsProviderIdentityToken
+2020-06-18 22:58:31.910 +08:00 [DBG] Issued claims: ["name","given_name","family_name","email","email_verified","website","address"]
+2020-06-18 22:58:31.914 +08:00 [DBG] Token request success.
+2020-06-18 23:00:33.565 +08:00 [INF] Starting IdentityServer4 version 3.1.3.0
+2020-06-18 23:00:33.598 +08:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2020-06-18 23:00:33.603 +08:00 [INF] Using the default authentication scheme idsrv for IdentityServer
+2020-06-18 23:00:33.604 +08:00 [DBG] Using idsrv as default ASP.NET Core scheme for authentication
+2020-06-18 23:00:33.604 +08:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-in
+2020-06-18 23:00:33.605 +08:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-out
+2020-06-18 23:00:33.605 +08:00 [DBG] Using idsrv as default ASP.NET Core scheme for challenge
+2020-06-18 23:00:33.605 +08:00 [DBG] Using idsrv as default ASP.NET Core scheme for forbid
+2020-06-18 23:00:47.371 +08:00 [WRN] Failed to determine the https port for redirect.
+2020-06-18 23:00:47.392 +08:00 [DBG] Login Url: /Account/Login
+2020-06-18 23:00:47.392 +08:00 [DBG] Login Return Url Parameter: ReturnUrl
+2020-06-18 23:00:47.392 +08:00 [DBG] Logout Url: /Account/Logout
+2020-06-18 23:00:47.392 +08:00 [DBG] ConsentUrl Url: /consent
+2020-06-18 23:00:47.393 +08:00 [DBG] Consent Return Url Parameter: returnUrl
+2020-06-18 23:00:47.393 +08:00 [DBG] Error Url: /home/error
+2020-06-18 23:00:47.393 +08:00 [DBG] Error Id Parameter: errorId
+2020-06-18 23:00:47.414 +08:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2020-06-18 23:00:47.426 +08:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2020-06-18 23:00:47.427 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2020-06-18 23:00:47.429 +08:00 [DBG] Start authorize request
+2020-06-18 23:00:47.440 +08:00 [DBG] User in authorize request: 1
+2020-06-18 23:00:47.443 +08:00 [DBG] Start authorize request protocol validation
+2020-06-18 23:00:47.455 +08:00 [DBG] client configuration validation for client mvc client succeeded.
+2020-06-18 23:00:47.466 +08:00 [DBG] Checking for PKCE parameters
+2020-06-18 23:00:47.496 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2020-06-18 23:00:47.511 +08:00 [DBG] ValidatedAuthorizeRequest
+{"ClientId":"mvc client","ClientName":"ASP.NET Core MVC Client","RedirectUri":"http://localhost:5002/signin-oidc","AllowedRedirectUris":["http://localhost:5002/signin-oidc"],"SubjectId":"1","ResponseType":"code","ResponseMode":"form_post","GrantType":"authorization_code","RequestedScopes":"api1 openid profile email phone address offline_access","State":"CfDJ8Mj69Gxn54FGm2tiBwk-z0s9rqjIyume6HU4yPBnGOW-UMyFYoBHLxYxTjIzpob4wd5jtVn4oXLURb2o83NAaHby1a2KNFZ3OJuP5KPTB8f-Cvmntw6KL1Hs6ysvH_dJ8PONTY3pXaxj-Hl_R_ID_q1rX-jK0R4cZ8z8cF2AiZEP5zv-ihrTDL4ifInFncoydNmdovLm4ZeNGHfNagZZ5pXhSEUXhz2mG0qn7iEq4bmKJp-EAL1MZur7gtvIbTWmi3vDAVwUCt1-PjM4vrBKYRpDNKMfDKz12lPRET2ptwcKRwUk6ao-hGrFcr5xdaQ35b0Kg2v8CKQYqaUB-wn-sljRiE4Lhk0JosjtB2uni5tIjUJyu0cYOqvIaxFb8I0LPA","UiLocales":null,"Nonce":"637280892472908155.OTFjYjgwZTQtNjJkMS00MTk2LTkwZDktMmUyY2FjMTY2ZGE4Zjk5ZDUyYjItOWZiMi00ODY3LTk3NGMtYmVjYjY2M2JlYmFi","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"bfU-k60uoezyLk5hxXbaHA","Raw":{"client_id":"mvc client","redirect_uri":"http://localhost:5002/signin-oidc","response_type":"code","scope":"api1 openid profile email phone address offline_access","code_challenge":"xwEzDiz1yCUIr-lnkwL0JlU5VunYu1JD4oMwkIqp0wU","code_challenge_method":"S256","response_mode":"form_post","nonce":"637280892472908155.OTFjYjgwZTQtNjJkMS00MTk2LTkwZDktMmUyY2FjMTY2ZGE4Zjk5ZDUyYjItOWZiMi00ODY3LTk3NGMtYmVjYjY2M2JlYmFi","state":"CfDJ8Mj69Gxn54FGm2tiBwk-z0s9rqjIyume6HU4yPBnGOW-UMyFYoBHLxYxTjIzpob4wd5jtVn4oXLURb2o83NAaHby1a2KNFZ3OJuP5KPTB8f-Cvmntw6KL1Hs6ysvH_dJ8PONTY3pXaxj-Hl_R_ID_q1rX-jK0R4cZ8z8cF2AiZEP5zv-ihrTDL4ifInFncoydNmdovLm4ZeNGHfNagZZ5pXhSEUXhz2mG0qn7iEq4bmKJp-EAL1MZur7gtvIbTWmi3vDAVwUCt1-PjM4vrBKYRpDNKMfDKz12lPRET2ptwcKRwUk6ao-hGrFcr5xdaQ35b0Kg2v8CKQYqaUB-wn-sljRiE4Lhk0JosjtB2uni5tIjUJyu0cYOqvIaxFb8I0LPA","x-client-SKU":"ID_NETSTANDARD2_0","x-client-ver":"5.5.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2020-06-18 23:00:47.530 +08:00 [DBG] IsActive called from: AuthorizeEndpoint
+2020-06-18 23:00:47.535 +08:00 [DBG] Scopes contains offline_access, consent is required
+2020-06-18 23:00:47.536 +08:00 [INF] Showing consent: User has not yet consented
+2020-06-18 23:00:47.643 +08:00 [DBG] Start authorize request protocol validation
+2020-06-18 23:00:47.644 +08:00 [DBG] client configuration validation for client mvc client succeeded.
+2020-06-18 23:00:47.644 +08:00 [DBG] Checking for PKCE parameters
+2020-06-18 23:00:47.645 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2020-06-18 23:00:47.647 +08:00 [DBG] client configuration validation for client mvc client succeeded.
+2020-06-18 23:00:50.408 +08:00 [DBG] CORS request made for path: /Consent from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2020-06-18 23:00:50.442 +08:00 [DBG] Start authorize request protocol validation
+2020-06-18 23:00:50.443 +08:00 [DBG] client configuration validation for client mvc client succeeded.
+2020-06-18 23:00:50.444 +08:00 [DBG] Checking for PKCE parameters
+2020-06-18 23:00:50.445 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2020-06-18 23:00:50.504 +08:00 [DBG] client configuration validation for client mvc client succeeded.
+2020-06-18 23:00:50.509 +08:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2020-06-18 23:00:50.510 +08:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2020-06-18 23:00:50.511 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2020-06-18 23:00:50.514 +08:00 [DBG] Start authorize callback request
+2020-06-18 23:00:50.537 +08:00 [DBG] User in authorize request: 1
+2020-06-18 23:00:50.538 +08:00 [DBG] Start authorize request protocol validation
+2020-06-18 23:00:50.538 +08:00 [DBG] client configuration validation for client mvc client succeeded.
+2020-06-18 23:00:50.539 +08:00 [DBG] Checking for PKCE parameters
+2020-06-18 23:00:50.539 +08:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2020-06-18 23:00:50.540 +08:00 [DBG] ValidatedAuthorizeRequest
+{"ClientId":"mvc client","ClientName":"ASP.NET Core MVC Client","RedirectUri":"http://localhost:5002/signin-oidc","AllowedRedirectUris":["http://localhost:5002/signin-oidc"],"SubjectId":"1","ResponseType":"code","ResponseMode":"form_post","GrantType":"authorization_code","RequestedScopes":"api1 openid profile email phone address offline_access","State":"CfDJ8Mj69Gxn54FGm2tiBwk-z0s9rqjIyume6HU4yPBnGOW-UMyFYoBHLxYxTjIzpob4wd5jtVn4oXLURb2o83NAaHby1a2KNFZ3OJuP5KPTB8f-Cvmntw6KL1Hs6ysvH_dJ8PONTY3pXaxj-Hl_R_ID_q1rX-jK0R4cZ8z8cF2AiZEP5zv-ihrTDL4ifInFncoydNmdovLm4ZeNGHfNagZZ5pXhSEUXhz2mG0qn7iEq4bmKJp-EAL1MZur7gtvIbTWmi3vDAVwUCt1-PjM4vrBKYRpDNKMfDKz12lPRET2ptwcKRwUk6ao-hGrFcr5xdaQ35b0Kg2v8CKQYqaUB-wn-sljRiE4Lhk0JosjtB2uni5tIjUJyu0cYOqvIaxFb8I0LPA","UiLocales":null,"Nonce":"637280892472908155.OTFjYjgwZTQtNjJkMS00MTk2LTkwZDktMmUyY2FjMTY2ZGE4Zjk5ZDUyYjItOWZiMi00ODY3LTk3NGMtYmVjYjY2M2JlYmFi","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"bfU-k60uoezyLk5hxXbaHA","Raw":{"client_id":"mvc client","redirect_uri":"http://localhost:5002/signin-oidc","response_type":"code","scope":"api1 openid profile email phone address offline_access","code_challenge":"xwEzDiz1yCUIr-lnkwL0JlU5VunYu1JD4oMwkIqp0wU","code_challenge_method":"S256","response_mode":"form_post","nonce":"637280892472908155.OTFjYjgwZTQtNjJkMS00MTk2LTkwZDktMmUyY2FjMTY2ZGE4Zjk5ZDUyYjItOWZiMi00ODY3LTk3NGMtYmVjYjY2M2JlYmFi","state":"CfDJ8Mj69Gxn54FGm2tiBwk-z0s9rqjIyume6HU4yPBnGOW-UMyFYoBHLxYxTjIzpob4wd5jtVn4oXLURb2o83NAaHby1a2KNFZ3OJuP5KPTB8f-Cvmntw6KL1Hs6ysvH_dJ8PONTY3pXaxj-Hl_R_ID_q1rX-jK0R4cZ8z8cF2AiZEP5zv-ihrTDL4ifInFncoydNmdovLm4ZeNGHfNagZZ5pXhSEUXhz2mG0qn7iEq4bmKJp-EAL1MZur7gtvIbTWmi3vDAVwUCt1-PjM4vrBKYRpDNKMfDKz12lPRET2ptwcKRwUk6ao-hGrFcr5xdaQ35b0Kg2v8CKQYqaUB-wn-sljRiE4Lhk0JosjtB2uni5tIjUJyu0cYOqvIaxFb8I0LPA","x-client-SKU":"ID_NETSTANDARD2_0","x-client-ver":"5.5.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2020-06-18 23:00:50.546 +08:00 [DBG] IsActive called from: AuthorizeEndpoint
+2020-06-18 23:00:50.547 +08:00 [DBG] Scopes contains offline_access, consent is required
+2020-06-18 23:00:50.552 +08:00 [INF] User consented to scopes: ["openid","profile","address","phone","email","api1","offline_access"]
+2020-06-18 23:00:50.554 +08:00 [DBG] Client allows remembering consent, and no scopes provided. Removing consent from consent store for subject: 1
+2020-06-18 23:00:50.558 +08:00 [DBG] Creating Authorization Code Flow response.
+2020-06-18 23:00:50.601 +08:00 [DBG] Authorize endpoint response
+{"SubjectId":"1","ClientId":"mvc client","RedirectUri":"http://localhost:5002/signin-oidc","State":"CfDJ8Mj69Gxn54FGm2tiBwk-z0s9rqjIyume6HU4yPBnGOW-UMyFYoBHLxYxTjIzpob4wd5jtVn4oXLURb2o83NAaHby1a2KNFZ3OJuP5KPTB8f-Cvmntw6KL1Hs6ysvH_dJ8PONTY3pXaxj-Hl_R_ID_q1rX-jK0R4cZ8z8cF2AiZEP5zv-ihrTDL4ifInFncoydNmdovLm4ZeNGHfNagZZ5pXhSEUXhz2mG0qn7iEq4bmKJp-EAL1MZur7gtvIbTWmi3vDAVwUCt1-PjM4vrBKYRpDNKMfDKz12lPRET2ptwcKRwUk6ao-hGrFcr5xdaQ35b0Kg2v8CKQYqaUB-wn-sljRiE4Lhk0JosjtB2uni5tIjUJyu0cYOqvIaxFb8I0LPA","Scope":"openid profile email phone address api1 offline_access","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2020-06-18 23:00:50.693 +08:00 [DBG] Request path /connect/token matched to endpoint type Token
+2020-06-18 23:00:50.700 +08:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2020-06-18 23:00:50.701 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2020-06-18 23:00:50.704 +08:00 [DBG] Start token request.
+2020-06-18 23:00:50.707 +08:00 [DBG] Start client validation
+2020-06-18 23:00:50.716 +08:00 [DBG] Start parsing Basic Authentication secret
+2020-06-18 23:00:50.718 +08:00 [DBG] Start parsing for secret in post body
+2020-06-18 23:00:50.719 +08:00 [DBG] Parser found secret: PostBodySecretParser
+2020-06-18 23:00:50.719 +08:00 [DBG] Secret id found: mvc client
+2020-06-18 23:00:50.720 +08:00 [DBG] client configuration validation for client mvc client succeeded.
+2020-06-18 23:00:50.734 +08:00 [DBG] Secret validator success: HashedSharedSecretValidator
+2020-06-18 23:00:50.735 +08:00 [DBG] Client validation success
+2020-06-18 23:00:50.739 +08:00 [DBG] Start token request validation
+2020-06-18 23:00:50.746 +08:00 [DBG] Start validation of authorization code token request
+2020-06-18 23:00:50.774 +08:00 [DBG] Client required a proof key for code exchange. Starting PKCE validation
+2020-06-18 23:00:50.776 +08:00 [DBG] IsActive called from: AuthorizationCodeValidation
+2020-06-18 23:00:50.776 +08:00 [DBG] Validation of authorization code token request success
+2020-06-18 23:00:50.780 +08:00 [INF] Token request validation success, {"ClientId":"mvc client","ClientName":"ASP.NET Core MVC Client","GrantType":"authorization_code","Scopes":null,"AuthorizationCode":"lsRddCS3Gc54wLygY4yuiqYruXso4HBkWiLyo-is2Fc","RefreshToken":null,"UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"client_id":"mvc client","client_secret":"***REDACTED***","code":"lsRddCS3Gc54wLygY4yuiqYruXso4HBkWiLyo-is2Fc","grant_type":"authorization_code","redirect_uri":"http://localhost:5002/signin-oidc","code_verifier":"Z3pUIRbBlZH7j9MMpJ8svqqQLn8nsLvbRyYjZ4IMjjI"},"$type":"TokenRequestValidationLog"}
+2020-06-18 23:00:50.788 +08:00 [DBG] client configuration validation for client mvc client succeeded.
+2020-06-18 23:00:50.803 +08:00 [DBG] Getting claims for access token for client: mvc client
+2020-06-18 23:00:50.803 +08:00 [DBG] Getting claims for access token for subject: 1
+2020-06-18 23:00:50.806 +08:00 [DBG] Get profile called for subject 1 from client ASP.NET Core MVC Client with claim types [] via ClaimsProviderAccessToken
+2020-06-18 23:00:50.807 +08:00 [DBG] Issued claims: []
+2020-06-18 23:00:50.865 +08:00 [DBG] Creating refresh token
+2020-06-18 23:00:50.866 +08:00 [DBG] Setting an absolute lifetime: 2592000
+2020-06-18 23:00:50.883 +08:00 [DBG] client configuration validation for client mvc client succeeded.
+2020-06-18 23:00:50.890 +08:00 [DBG] Getting claims for identity token for subject: 1 and client: mvc client
+2020-06-18 23:00:50.891 +08:00 [DBG] Get profile called for subject 1 from client ASP.NET Core MVC Client with claim types ["name","family_name","given_name","middle_name","nickname","preferred_username","profile","picture","website","gender","birthdate","zoneinfo","locale","updated_at","address","phone_number","phone_number_verified","email","email_verified"] via ClaimsProviderIdentityToken
+2020-06-18 23:00:50.893 +08:00 [DBG] Issued claims: ["name","given_name","family_name","email","email_verified","website","address"]
+2020-06-18 23:00:50.922 +08:00 [DBG] Token request success.

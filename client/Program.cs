@@ -10,7 +10,7 @@ namespace client
         static void Main(string[] args)
         {
             var client = new HttpClient();
-            var disco = client.GetDiscoveryDocumentAsync("http://localhost:5727").GetAwaiter().GetResult();
+            var disco = client.GetDiscoveryDocumentAsync("http://localhost:5000").GetAwaiter().GetResult();
             if (disco.IsError)
             {
                 Console.WriteLine(disco.Error);
@@ -24,7 +24,7 @@ namespace client
                 ClientId = "passwordclient",
                 ClientSecret = "secret",
                 Scope = "api1",
-                UserName = "tony",
+                UserName = "alice",
                 Password = "123456",
             }).GetAwaiter().GetResult();
 

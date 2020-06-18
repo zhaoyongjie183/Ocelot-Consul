@@ -1,16 +1,36 @@
 {
   "ReRoutes": [
     {
-     // "UseServiceDiscovery": true,
+      "UseServiceDiscovery": true,
       "ServiceName": "Api_ServerB", //consul服务名称
-      "DownstreamPathTemplate": "/{url}",
+      "DownstreamPathTemplate": "/api/{url}",
       "DownstreamScheme": "http",
-      "UpstreamPathTemplate": "/{url}",
+      "UpstreamPathTemplate": "/apiB/{url}",
       "UpstreamHttpMethod": [ "Get", "Post" ],
       "LoadBalancerOptions": {
         "Type": "RoundRobin" //轮询      LeastConnection-最少连接数的服务器   NoLoadBalance不负载均衡
+      },
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "client_b", //AuthenticationProviderKey 其实就是授权的authenticationscheme
+        "AllowScopes": [ "Api_ServerB" ] //allscopes 就是 apiresource中配置的授权访问范围，这里配置的即 ApiName
+      }
+    },
+    {
+      "UseServiceDiscovery": true,
+      "ServiceName": "Api_ServerA", //consul服务名称
+      "DownstreamPathTemplate": "/api/{url}",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/apiA/{url}",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin" //轮询      LeastConnection-最少连接数的服务器   NoLoadBalance不负载均衡
+      },
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "client_a", //AuthenticationProviderKey 其实就是授权的authenticationscheme
+        "AllowScopes": [ "Api_ServerA" ] //allscopes 就是 apiresource中配置的授权访问范围，这里配置的即 ApiName
       }
     }
+
   ],
   "GlobalConfiguration": {
     "BaseUrl":null,

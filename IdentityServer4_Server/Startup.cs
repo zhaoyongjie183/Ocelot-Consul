@@ -32,6 +32,7 @@ namespace IdentityServer4_Server
             .AddInMemoryApiResources(Config.GetApiResources())
             .AddInMemoryClients(Config.GetClients())
             .AddTestUsers(Config.GetUsers());
+            //.AddResourceOwnerValidator<>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

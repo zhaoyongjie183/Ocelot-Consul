@@ -25,6 +25,7 @@ namespace IdentityServer4_Openid
                     Claims =
                     {
                         new Claim(JwtClaimTypes.Name, "Alice Smith"),
+                        new Claim(JwtClaimTypes.Role,"admin"),
                         new Claim(JwtClaimTypes.GivenName, "Alice"),
                         new Claim(JwtClaimTypes.FamilyName, "Smith"),
                         new Claim(JwtClaimTypes.Email, "AliceSmith@email.com"),
@@ -38,10 +39,11 @@ namespace IdentityServer4_Openid
                     SubjectId = "2",
                     Username = "bob",
                     Password = "123456",
-                     Claims =
+                    Claims =
                     {
                         new Claim(JwtClaimTypes.Name, "Bob Smith"),
                         new Claim(JwtClaimTypes.GivenName, "Bob"),
+                        new Claim(JwtClaimTypes.Role,"superadmin"),
                         new Claim(JwtClaimTypes.FamilyName, "Smith"),
                         new Claim(JwtClaimTypes.Email, "BobSmith@email.com"),
                         new Claim(JwtClaimTypes.EmailVerified, "true", ClaimValueTypes.Boolean),

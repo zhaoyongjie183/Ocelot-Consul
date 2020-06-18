@@ -13,7 +13,7 @@ namespace IdentityServer4_Openid
         public static TimeSpan RememberMeLoginDuration = TimeSpan.FromDays(30);
 
         public static bool ShowLogoutPrompt = true;
-        public static bool AutomaticRedirectAfterSignOut = false;//自动跳转页面
+        public static bool AutomaticRedirectAfterSignOut = true;//自动跳转页面
 
         // specify the Windows authentication scheme being used
         public static readonly string WindowsAuthenticationSchemeName = Microsoft.AspNetCore.Server.IISIntegration.IISDefaults.AuthenticationScheme;
