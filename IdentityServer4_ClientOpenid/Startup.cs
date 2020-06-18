@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Threading.Tasks;
+using IdentityModel;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -31,19 +33,26 @@ namespace IdentityServer4_ClientOpenid
 
             services.AddAuthentication(options =>
             {
-                options.DefaultScheme = "Cookies";
-                options.DefaultChallengeScheme = "oidc";
+                options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme; //"Cookies";
+                options.DefaultChallengeScheme = OpenIdConnectDefaults.AuthenticationScheme;//"oidc";
             })
-                .AddCookie("Cookies")
-                .AddOpenIdConnect("oidc", options =>
+                .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddOpenIdConnect(OpenIdConnectDefaults.AuthenticationScheme, options =>
                 {
-                    options.SignInScheme = "Cookies";
+                    options.SignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
 
                     options.Authority = "http://localhost:5000";
                     options.RequireHttpsMetadata = false;
 
                     options.ClientId = "mvc";
-                    options.SaveTokens = true;
+                    options.SaveTokens = true;//把获取的token存在cookie当中
+                    options.ClientSecret = "mvc secret";
+                    options.ResponseType = "code";
+
+                    options.Scope.Clear();
+
+                    options.Scope.Add(OidcConstants.StandardScopes.OfflineAccess);
+
                 });
         }
 

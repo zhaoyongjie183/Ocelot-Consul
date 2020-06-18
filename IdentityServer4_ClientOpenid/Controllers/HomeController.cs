@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using IdentityServer4_ClientOpenid.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace IdentityServer4_ClientOpenid.Controllers
 {
@@ -31,6 +33,13 @@ namespace IdentityServer4_ClientOpenid.Controllers
         {
             return View();
         }
+
+
+        public async Task LoginOut()
+        {
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+        }
+
 
         public IActionResult Privacy()
         {
