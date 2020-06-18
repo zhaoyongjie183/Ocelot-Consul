@@ -15,19 +15,25 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebClient", "WebClient\WebC
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{013DC978-2AF6-40C9-B307-EAC1960571B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceA", "ServiceA\ServiceA.csproj", "{6529A59E-F616-4B5B-9215-D97C352EBE3A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceA", "ServiceA\ServiceA.csproj", "{6529A59E-F616-4B5B-9215-D97C352EBE3A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityServer4", "IdentityServer4", "{D5F8D09F-198B-4884-A851-B204274DDC09}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer4_Server", "IdentityServer4_Server\IdentityServer4_Server.csproj", "{D6B20A44-38DA-4BCB-AAD9-67F84A209317}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer4_Server", "IdentityServer4_Server\IdentityServer4_Server.csproj", "{D6B20A44-38DA-4BCB-AAD9-67F84A209317}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer4_Api", "IdentityServer4_Api\IdentityServer4_Api.csproj", "{2BC17785-F617-4D94-9544-F01F0904DB04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer4_Api", "IdentityServer4_Api\IdentityServer4_Api.csproj", "{2BC17785-F617-4D94-9544-F01F0904DB04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "client", "client\client.csproj", "{00466C0B-24C5-4956-968E-E7F10F57F9FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "client", "client\client.csproj", "{00466C0B-24C5-4956-968E-E7F10F57F9FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer4_Openid", "IdentityServer4_Openid\IdentityServer4_Openid.csproj", "{6BA1E619-02B3-4EE7-98CA-9D9B2A688ABC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer4_Openid", "IdentityServer4_Openid\IdentityServer4_Openid.csproj", "{6BA1E619-02B3-4EE7-98CA-9D9B2A688ABC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer4_ClientOpenid", "IdentityServer4_ClientOpenid\IdentityServer4_ClientOpenid.csproj", "{6FEA2D43-9077-4C5F-BF9C-0F82E0412287}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer4_ClientOpenid", "IdentityServer4_ClientOpenid\IdentityServer4_ClientOpenid.csproj", "{6FEA2D43-9077-4C5F-BF9C-0F82E0412287}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceB", "ServiceB\ServiceB.csproj", "{C07FCB30-5AD4-4C2D-A85D-B9723F85EF28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer_Server", "IdentityServer_Server\IdentityServer_Server.csproj", "{EFEC00F3-8979-4BCF-A04F-B3C8345CC3AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OcelotIdentityService", "OcelotIdentityService\OcelotIdentityService.csproj", "{5F02975E-4ADC-470E-814C-EB674C0D6138}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,6 +85,18 @@ Global
 		{6FEA2D43-9077-4C5F-BF9C-0F82E0412287}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FEA2D43-9077-4C5F-BF9C-0F82E0412287}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6FEA2D43-9077-4C5F-BF9C-0F82E0412287}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C07FCB30-5AD4-4C2D-A85D-B9723F85EF28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C07FCB30-5AD4-4C2D-A85D-B9723F85EF28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C07FCB30-5AD4-4C2D-A85D-B9723F85EF28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C07FCB30-5AD4-4C2D-A85D-B9723F85EF28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFEC00F3-8979-4BCF-A04F-B3C8345CC3AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFEC00F3-8979-4BCF-A04F-B3C8345CC3AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFEC00F3-8979-4BCF-A04F-B3C8345CC3AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFEC00F3-8979-4BCF-A04F-B3C8345CC3AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F02975E-4ADC-470E-814C-EB674C0D6138}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F02975E-4ADC-470E-814C-EB674C0D6138}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F02975E-4ADC-470E-814C-EB674C0D6138}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F02975E-4ADC-470E-814C-EB674C0D6138}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -90,6 +108,9 @@ Global
 		{00466C0B-24C5-4956-968E-E7F10F57F9FC} = {D5F8D09F-198B-4884-A851-B204274DDC09}
 		{6BA1E619-02B3-4EE7-98CA-9D9B2A688ABC} = {D5F8D09F-198B-4884-A851-B204274DDC09}
 		{6FEA2D43-9077-4C5F-BF9C-0F82E0412287} = {D5F8D09F-198B-4884-A851-B204274DDC09}
+		{C07FCB30-5AD4-4C2D-A85D-B9723F85EF28} = {013DC978-2AF6-40C9-B307-EAC1960571B3}
+		{EFEC00F3-8979-4BCF-A04F-B3C8345CC3AE} = {013DC978-2AF6-40C9-B307-EAC1960571B3}
+		{5F02975E-4ADC-470E-814C-EB674C0D6138} = {013DC978-2AF6-40C9-B307-EAC1960571B3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E940A5B6-2125-4B79-8573-4FDD461A70F0}

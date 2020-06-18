@@ -10,9 +10,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using ServiceA.Helper;
+using ServiceB.Helper;
 
-namespace ServiceA
+namespace ServiceB
 {
     public class Startup
     {
@@ -27,28 +27,24 @@ namespace ServiceA
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-          //  services.AddAuthentication("Bearer")
-          //.AddJwtBearer("Bearer", options =>
-          //{
-          //    options.Authority = "http://localhost:5823";//配置Identityserver的授权地址
-          //     options.RequireHttpsMetadata = false;//不需要https
-
-          //     options.Audience = "Api_ServerA"; //api的name，需要和config的名称相同
-          //                                // options.
-          // });
+     
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IHostApplicationLifetime hostApplicationLifetime)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env,IHostApplicationLifetime hostApplicationLifetime)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
+
+          
             app.UseHttpsRedirection();
 
             app.UseRouting();
-            //app.UseAuthentication();
+
+           // app.UseAuthentication();
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

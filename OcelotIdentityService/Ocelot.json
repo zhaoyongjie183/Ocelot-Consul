@@ -1,11 +1,11 @@
 {
   "ReRoutes": [
     {
-      "UseServiceDiscovery": true,
+     // "UseServiceDiscovery": true,
       "ServiceName": "Api_ServerB", //consul服务名称
-      "DownstreamPathTemplate": "/api/{url}",
+      "DownstreamPathTemplate": "/{url}",
       "DownstreamScheme": "http",
-      "UpstreamPathTemplate": "/T/{url}",
+      "UpstreamPathTemplate": "/{url}",
       "UpstreamHttpMethod": [ "Get", "Post" ],
       "LoadBalancerOptions": {
         "Type": "RoundRobin" //轮询      LeastConnection-最少连接数的服务器   NoLoadBalance不负载均衡
@@ -13,12 +13,11 @@
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": null,
+    "BaseUrl":null,
     "ServiceDiscoveryProvider": {
       "Host": "localhost",
       "Port": 8500,
       "Type": "Consul" //由Consul提供服务发现
     }
   }
-
 }

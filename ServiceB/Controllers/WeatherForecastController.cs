@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace ServiceA.Controllers
+namespace ServiceB.Controllers
 {
     [ApiController]
     [Route("api/[action]")]

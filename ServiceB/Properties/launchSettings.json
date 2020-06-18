@@ -3,11 +3,11 @@
   
   "profiles": {
    
-    "ServiceA": {
+    "ServiceB": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "weatherforecast",
-      "applicationUrl": "http://localhost:5820",
+      "applicationUrl": "http://localhost:5821",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
